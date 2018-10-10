@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="myChart" class="chart1" style="width:100%; height:100%;"></div>
+</body>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/china.js"></script>
+<script>
+    var chart1 = null;
+    $(function () {
+        chart1 = echarts.init($(".chart1").get(0));
+    });
+    setTimeout(function () {
+        option = {
+            title: {
+                text: '',
+                subtext: '',
+                link: ''
+            },
+            tooltip: {
+                show: true
+            },
+            legend: {
+                //type:'scroll',
+                bottom: 40,
+                x: 'center',
+                selected: {
+                    'others': false
+                },
+                data: ['Apple', 'Huawei', 'Xiaomi', 'Samsung', 'Oppo', 'others']
+            },
+
+            series: [{
+                type: 'pie',
+                radius: ['20%', '50%'],
+                roseType: 'area',
+                zlevel: 2,
+                tooltip: {
+                    formatter: '{b}: {d}%'
+                },
+                label: {
+                    normal: {
+                        show: true,
+                        formatter: '{b}\n{d}%'
+                    }
+                },
+                data: [{
+                    value: 14.7,
+                    name: 'Apple'
+                },
+                    {
+                        value: 10.4,
+                        name: 'Huawei'
+                    },
+                    {
+                        value: 6.3,
+                        name: 'Xiaomi'
+                    },
+                    {
+                        value: 21.6,
+                        name: 'Samsung'
+                    },
+                    {
+                        value: 7.6,
+                        name: 'Oppo'
+                    },
+                    {
+                        value: 39.4,
+                        name: 'others'
+                    }
+                ]
+            }]
+        };
+        chart1.setOption(option);
+    })
+</script>
+</html>

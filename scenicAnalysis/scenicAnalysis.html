@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./scenicAnalysis.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../js/laydate/theme/default/laydate.css" media="all">
+    <script src="../js/calendar.js"></script>
+</head>
+<body>
+<script src="../js/laydate/laydate.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/china.js"></script>
+<div class="baseDataAnalysis">
+    <div class="header">
+        <ul class="headerWap">
+            <li class="headerLeft">
+                <div class="index"></div>
+                <div class="basicData"></div>
+                <div class="secentAnalysis"></div>
+                <div class="roomAnalysis"></div>
+            </li>
+            <li class="headerCenter"></li>
+            <li class="headerRight">
+                <div class="holidayAnalysis"></div>
+                <div class="tirvalFace"></div>
+                <div class="teamWatch"></div>
+                <div class="seceryWatch"></div>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="contents">
+            <ul class="wapList">
+                <li class="left">
+                    <div class="top">
+                        <div class="allPageWap">
+                            <div class="allpageTitle">
+                                <div class="allpageTitleLeft">
+                                    <span class="allpageTitleDot"></span>
+                                    <span class="allpageTitleDetail">景区接待游客按月分析</span>
+                                </div>
+                                <div class="allpageTitleRight">数据来源：爬虫</div>
+                            </div>
+                            <div class="allPageContent">
+                                <div id="tirvalAndTeamBar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="allPageWap">
+                            <div class="allpageTitle">
+                                <div class="allpageTitleLeft">
+                                    <span class="allpageTitleDot"></span>
+                                    <span class="allpageTitleDetail">景区接待游客按年分析</span>
+                                </div>
+                                <div class="allpageTitleRight">数据来源：爬虫</div>
+                            </div>
+                            <div class="allPageContent">
+                                <div id="secenyTirvalerAnalysis"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="leftCenter">
+                    <form name="reg_testdate" class="calendar">
+                        <select name="YYYY" id="yearId" onchange="changeYear('yearId')">
+                            <option value="">请选择 年</option>
+                        </select>
+                        <select name="MM" id="monthId" onchange="changeTime('yearId','monthId')">
+                            <option value="">选择 月</option>
+                        </select>
+                    </form>
+                    <ul class="details">
+
+                        <li>
+                            <div class="tittle">今日接待游客数量</div>
+                            <div class="figure" id="dayCount">0</div>
+                        </li>
+                        <li>
+                            <div class="tittle">本月接待游客数量</div>
+                            <div class="figure" id="mouthCount">0</div>
+                        </li>
+                        <li>
+                            <div class="tittle">本季度接待游客数量</div>
+                            <div class="figure" id="quarterCount">0</div>
+                        </li>
+                        <li>
+                            <div class="tittle">本年接待游客数量</div>
+                            <div class="figure" id="yearCount">0</div>
+                        </li>
+                    </ul>
+                    <div id="lijiangmap"></div>
+                </li>
+                <li class="rightCenter">
+                    <div class="left">
+                        <div class="up">
+                            <div class="allPageWap">
+                                <div class="allpageTitle">
+                                    <div class="allpageTitleLeft">
+                                        <span class="allpageTitleDot"></span>
+                                        <span class="allpageTitleDetail">4A以上景区游客统计</span>
+                                    </div>
+                                    <div class="allpageTitleRight">数据来源：爬虫</div>
+                                </div>
+                                <div class="allPageContent">
+                                    <div id="upFourA"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="down">
+                            <div class="allPageWap">
+                                <div class="allpageTitle">
+                                    <div class="allpageTitleLeft">
+                                        <span class="allpageTitleDot"></span>
+                                        <span class="allpageTitleDetail">4A以上景区游客分析</span>
+                                    </div>
+                                    <div class="allpageTitleRight">数据来源：爬虫</div>
+                                </div>
+                                <div class="allPageContent">
+                                    <div id="secenyTirvalerAnalysisPie"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="up">
+                            <div class="allPageWap">
+                                <div class="allpageTitle">
+                                    <div class="allpageTitleLeft">
+                                        <span class="allpageTitleDot"></span>
+                                        <span class="allpageTitleDetail">景区停车统计</span>
+                                    </div>
+                                    <div class="allpageTitleRight">数据来源：爬虫</div>
+                                </div>
+                                <div class="allPageContent">
+                                    <div id="secenyParkAnalysisPie"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="down">
+                            <div class="allPageWap">
+                                <div class="allpageTitle">
+                                    <div class="allpageTitleLeft">
+                                        <span class="allpageTitleDot"></span>
+                                        <span class="allpageTitleDetail">景区停车分析</span>
+                                    </div>
+                                    <div class="allpageTitleRight">数据来源：爬虫</div>
+                                </div>
+                                <div class="allPageContent">
+                                    <div id="secenyParkAnalysis"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <ul class="footer" style="margin-top: 0.38%;">
+            <li>
+                <div class="liWaps">
+                    <div class="tittle">
+                        <div class="tittleLeft">
+                            <span class="dot"></span>
+                            <span class="from">景区游客性别统计</span>
+                        </div>
+                        <div class="tittleRight">
+                            数据来源：发改委
+                        </div>
+                    </div>
+                    <div class="footerConentList">
+                        <div id="secentCategoryAnalysis"></div>
+                        <div class="secentCategoryAnalysisCls"></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="liWaps">
+                    <div class="tittle">
+                        <div class="tittleLeft">
+                            <span class="dot"></span>
+                            <span class="from">景区游客年龄段统计</span>
+                        </div>
+                        <div class="tittleRight">
+                            数据来源：发改委
+                        </div>
+                    </div>
+                    <div class="footerConentList">
+                        <div id="tirvalAgeAnalysis"></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="liWaps">
+                    <div class="tittle">
+                        <div class="tittleLeft">
+                            <span class="dot"></span>
+                            <span class="from">景区游客地域分析</span>
+                        </div>
+                        <div class="tittleRight">
+                            数据来源：发改委
+                        </div>
+                    </div>
+                    <div class="footerConentList">
+                        <div id="chinaMap"></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="liWaps">
+                    <div class="tittle">
+                        <div class="tittleLeft">
+                            <span class="dot"></span>
+                            <span class="from">景区游客交通分析</span>
+                        </div>
+                        <div class="tittleRight">
+                            数据来源：发改委
+                        </div>
+                    </div>
+                    <div class="footerConentList">
+                        <div id="secentMeansAnalysis"></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="liWaps">
+                    <div class="tittle">
+                        <div class="tittleLeft">
+                            <span class="dot"></span>
+                            <span class="from">景区游客停留时长分析</span>
+                        </div>
+                        <div class="tittleRight">
+                            数据来源：发改委
+                        </div>
+                    </div>
+                    <div class="footerConentList">
+                        <div id="tirvalerStaying"></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="liWaps">
+                    <div class="tittle">
+                        <div class="tittleLeft">
+                            <span class="dot"></span>
+                            <span class="from">景区收入统计</span>
+                        </div>
+                        <div class="tittleRight">
+                            数据来源：发改委
+                        </div>
+                    </div>
+                    <div class="footerConentList">
+                        <div id="sceneSunAccount"></div>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<script src="../js/calendar.js"></script>
+<script src="../js/url.js"></script>
+<script src="../js/map.js"></script>
+<script src="../js/require.js"></script>
+<script src="scenicAnalysis.js"></script>
+
+<script src="../js/nav.js"></script>
+<script>
+    function getDateMeetNumber(addressCode){
+        $.ajax({
+            type: "GET",
+            async: false,
+            url: zhushu_url + "livingStatistics/getDateMeetNumber",
+            data: {addressCode:addressCode},
+            dataType: "json",
+            success: function (data) {
+                if (data.code == "OK") {
+                    $("#dayCount").html(formatMoney(data.data.today, 0));
+                    $("#mouthCount").html(formatMoney(data.data.month, 0));
+                    $("#quarterCount").html(formatMoney(data.data.quarter, 0));
+                    $("#yearCount").html(formatMoney(data.data.year, 0));
+                }
+            }
+        });
+    }
+    getDateMeetNumber("");
+</script>
+</body>
+</html>

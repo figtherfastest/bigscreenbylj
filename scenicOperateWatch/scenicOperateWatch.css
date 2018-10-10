@@ -1,0 +1,225 @@
+.baseDataAnalysis{
+    width:100%;
+    height: 100%;
+    background: url("../image/scenicOperateWatch/secenyOperateWatch.jpg") no-repeat;
+    background-size: 100% 100%;
+
+}
+.baseDataAnalysis .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.baseDataAnalysis .content>div{
+    border-top:2px solid #547beb ;
+    border-bottom:2px solid #547beb;
+    border-left: 1px solid #2a5cc8;
+    border-right: 1px solid #2a5cc8;
+}
+.baseDataAnalysis .content .map{
+    flex: 1;
+    height: 100%;
+}
+.baseDataAnalysis .content .map #lijiangmap{
+    width: 100%;
+    height: 100%;
+}
+.baseDataAnalysis .content .times{
+    flex: 1;
+    height: 100%;
+    margin:0 0.5% 0 0.5%;
+}
+.baseDataAnalysis .content .times .allpageTitle{
+    height: 3%;
+}
+.baseDataAnalysis .content .times .contentHeader{
+    width: 99%;
+    margin-left: 0.5%;
+    height: 4.1%;
+    background: #b3c1d9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.content .times .contentHeader>li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bolder;
+    font-size: 15px !important;
+}
+.content .times .contentHeader .senery{
+    flex: 5;
+    height: 100%;
+}
+.content .times .contentHeader .rank{
+    flex: 3;
+    height: 100%;
+}
+.content .times .contentHeader .park{
+    flex: 5;
+    height: 100%;
+}
+.content .times .contentHeader .column{
+    flex: 6;
+    height: 100%;
+}
+.content .times .contentHeader .maxWeight{
+    flex: 4;
+    height: 100%;
+}
+.content .times .contentListWap{
+    width: 99%;
+    margin-left: 0.5%;
+    height: 92%;
+}
+
+.times .contentListWap .contentList:nth-child(1){
+    background: #e6eefd;
+}
+.times .contentListWap .contentList{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content .times .contentListWap .contentList li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 14px !important;
+}
+.content .times .contentListWap .contentList .senery{
+    flex: 5;
+    height: 100%;
+}
+.content .times .contentListWap .contentList .rank{
+    flex: 3;
+    height: 100%;
+}
+.content .times .contentListWap .contentList .park{
+    flex: 5;
+    height: 100%;
+}
+.content .times .contentListWap .contentList .column{
+    flex: 6;
+    height: 100%;
+}
+.content .times .contentListWap .contentList .maxWeight{
+    flex: 4;
+    height: 100%;
+}
+
+
+.baseDataAnalysis .content .operateList{
+    flex: 1;
+    height: 100%;
+}
+.content .operateList .allpageTitle{
+    height: 3%;
+}
+.content .operateList .contentHeader{
+    width: 99%;
+    margin-left: 0.5%;
+    height: 4.1%;
+    background: #b3c1d9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content .operateList .contentHeader>li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bolder;
+    font-size: 15px !important;
+}
+.content .operateList .contentHeader .index{
+    width: 6%;
+    height: 100%;
+}
+.content .operateList .contentHeader .tit{
+    width: 60%;
+    height: 100%;
+}
+.content .operateList .contentHeader .putTime{
+    width: 20%;
+    height: 100%;
+}
+.content .operateList .contentHeader .column{
+    width: 14%;
+    height: 100%;
+}
+.content .operateList .operateListContentWap{
+    width: 99%;
+    margin-left: 0.5%;
+    height: 92%;
+    overflow: auto;
+}
+.operateList .operateListContentWap .operateListContent{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.operateList .operateListContentWap .operateListContent>li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.operateList .operateListContentWap .operateListContent:nth-child(1){
+    background: #e6eefd;
+}
+.operateList .operateListContentWap .operateListContent .index{
+    width: 6%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.operateListContentWap .operateListContent .index .in{
+    width: 80%;
+    height: 25px;
+    display: inline-block;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 3px;
+    color: white;
+}
+.operateListContentWap .operateListContent:nth-child(1) .index .in{
+    background: #ffc316;
+}
+.operateListContentWap .operateListContent:nth-child(2) .index .in{
+    background: #06fba9;
+}
+.operateListContentWap .operateListContent:nth-child(3) .index .in{
+    background: #128aff;
+}
+.operateListContentWap .operateListContent:nth-child(n+4) .index .in{
+    background: #0ecdf8;
+}
+
+.operateList .operateListContentWap .operateListContent .tit{
+    width: 54%;
+    margin-left: 3%;
+    margin-right: 3%;
+    height: 100%;
+    word-break:keep-all;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.operateList .operateListContentWap .operateListContent .putTime{
+    width: 20%;
+    height: 100%;
+}
+.operateList .operateListContentWap .operateListContent .column{
+    width: 14%;
+    height: 100%;
+}

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据分析</title>
+    <link rel="stylesheet" href="./baseDataAnalysis.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/echarts.min.js"></script>
+<div class="baseDataAnalysis">
+    <div class="header">
+        <ul class="headerWap">
+            <li class="headerLeft">
+                <div class="index"></div>
+                <div class="basicData"></div>
+                <div class="secentAnalysis"></div>
+                <div class="roomAnalysis"></div>
+            </li>
+            <li class="headerCenter"></li>
+            <li class="headerRight">
+                <div class="holidayAnalysis"></div>
+                <div class="tirvalFace"></div>
+                <div class="teamWatch"></div>
+                <div class="seceryWatch"></div>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="contents">
+            <ul class="wapList">
+                <li class="left">
+                    <div class="top">
+                        <div class="allPageWap">
+                            <div class="allpageTitle">
+                                <div class="allpageTitleLeft">
+                                    <span class="allpageTitleDot"></span>
+                                    <span class="allpageTitleDetail">景区统计</span>
+                                </div>
+                                <div class="allpageTitleRight">数据来源:运营商</div>
+                            </div>
+                            <div class="allPageContent">
+                                <div id="secenyAnalysis"></div>
+                                <div class="barWaps">
+                                    <div class="wapTitle secentCategory">
+                                        共有 <span class="allTotals">1*1</span>个
+                                    </div>
+                                    <div id="secentCategory"></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="allPageWap">
+                            <div class="allpageTitle">
+                                <div class="allpageTitleLeft">
+                                    <span class="allpageTitleDot"></span>
+                                    <span class="allpageTitleDetail">酒店统计</span>
+                                </div>
+                                <div class="allpageTitleRight">数据来源:公安局</div>
+                            </div>
+                            <div class="allPageContent">
+                                <div id="hotelOperate"></div>
+                                <div class="barWaps">
+                                    <div class="wapTitle hotelOperateBar">
+                                        共有 <span class="allTotals">2*1</span>个
+                                    </div>
+                                    <div id="hotelOperateBar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="leftCenter">
+                    <div class="leftCenterLeft" id="industryInfo">
+                        <ul class="meansLeft">
+                            <li>
+                                <div class="dataLeft">
+                                    <div class="tit" id="t1"></div>
+                                    <div class="details" id="to1"></div>
+                                </div>
+                                <div class="dataRight">
+                                    <div class="tit" id="t2"></div>
+                                    <div class="details" id="to2"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dataLeft">
+                                    <div class="tit" id="t3"></div>
+                                    <div class="details" id="to3"></div>
+                                </div>
+                                <div class="dataRight">
+                                    <div class="tit" id="t4"></div>
+                                    <div class="details" id="to4"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dataLeft">
+                                    <div class="tit" id="t5"></div>
+                                    <div class="details" id="to5"></div>
+                                </div>
+                                <div class="dataRight">
+                                    <div class="tit" id="t6"></div>
+                                    <div class="details" id="to6"></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="meansRight">
+                            <li>
+                                <div class="dataLeft">
+                                    <div class="tit" id="t7"></div>
+                                    <div class="details" id="to7"></div>
+                                </div>
+                                <div class="dataRight">
+                                    <div class="tit" id="t8"></div>
+                                    <div class="details" id="to8"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dataLeft">
+                                    <div class="tit" id="t9"></div>
+                                    <div class="details" id="to9"></div>
+                                </div>
+                                <div class="dataRight">
+                                    <div class="tit" id="t10"></div>
+                                    <div class="details" id="to10"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dataLeft">
+                                    <div class="tit" id="t11"></div>
+                                    <div class="details" id="to11"></div>
+                                </div>
+                                <div class="dataRight">
+                                    <div class="tit" id="t12"></div>
+                                    <div class="details" id="to12"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="leftCenterRight">
+                        <div id="lijiangmap"></div>
+                    </div>
+                </li>
+                <li class="rightCenter">
+                    <div class="rightCenterTop">
+                        <div class="allPageWap">
+                            <div class="allpageTitle">
+                                <div class="allpageTitleLeft">
+                                    <span class="allpageTitleDot"></span>
+                                    <span class="allpageTitleDetail">各行业统计</span>
+                                </div>
+                                <div class="allpageTitleRight">数据来源:旅发委</div>
+                            </div>
+                            <div class="allPageContent">
+                                <div id="anyIndustryAnalysis"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rightCenterBottom">
+                        <div class="allPageWap">
+                            <div class="allpageTitle">
+                                <div class="allpageTitleLeft">
+                                    <span class="allpageTitleDot"></span>
+                                    <span class="allpageTitleDetail">各区域行业总数统计</span>
+                                </div>
+                                <div class="allpageTitleRight">数据来源:旅发委</div>
+                            </div>
+                            <div class="allPageContent">
+                                <div id="anyRegionAnalysis"></div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="right">
+                    <div class="rightTop">
+                        <div class="allPageWap">
+                            <div class="allpageTitle">
+                                <div class="allpageTitleLeft">
+                                    <span class="allpageTitleDot"></span>
+                                    <span class="allpageTitleDetail">旅行社统计</span>
+                                </div>
+                                <div class="allpageTitleRight">数据来源:旅发委</div>
+                            </div>
+                            <div class="allPageContent">
+                                <div id="tirvalAgencyAnalysis"></div>
+                                <div class="barWaps">
+                                    <div class="wapTitle tirvalAgencyAnalysisBar">
+                                        共有 <span class="allTotals">1*6</span>个
+                                    </div>
+                                    <div id="tirvalAgencyAnalysisBar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rightBottom">
+                        <div class="allPageWap">
+                            <div class="allpageTitle">
+                                <div class="allpageTitleLeft">
+                                    <span class="allpageTitleDot"></span>
+                                    <span class="allpageTitleDetail">旅游厕所统计</span>
+                                </div>
+                                <div class="allpageTitleRight">数据来源:旅发委</div>
+                            </div>
+                            <div class="allPageContent">
+                                <div id="tirvalWcAnalysis"></div>
+                                <div class="barWaps">
+                                    <div class="wapTitle tirvalWcAnalysisBar">
+                                        共有 <span class="allTotals">2*6</span>个
+                                    </div>
+                                    <div id="tirvalWcAnalysisBar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <ul class="footer">
+            <li>
+                <div class="liWaps" style="width: 97%;">
+                    <div class="tittle">
+                        <div class="tittleLeft">
+                            <span class="dot"></span>
+                            <span class="from">导游统计</span>
+                        </div>
+                        <div class="tittleRight">
+                            数据来源:发改委
+                        </div>
+                    </div>
+                    <div class="footerConentList">
+                        <div id="tourGuideAnalysis"></div>
+                        <div class="barWaps">
+                            <div class="wapTitle tourGuideAnalysisBar">
+                                共有 <span class="allTotals">footer</span>个
+                            </div>
+                            <div id="tourGuideAnalysisBar"></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="liWaps">
+                    <div class="tittle">
+                        <div class="tittleLeft">
+                            <span class="dot"></span>
+                            <span class="from">餐饮场所统计</span>
+                        </div>
+                        <div class="tittleRight">
+                            数据来源：发改委
+                        </div>
+                    </div>
+                    <div class="footerConentList">
+                        <div id="foodPlaceAnalysis"></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="liWaps" >
+                    <div class="tittle">
+                        <div class="tittleLeft">
+                            <span class="dot"></span>
+                            <span class="from">购物场所统计</span>
+                        </div>
+                        <div class="tittleRight">
+                            数据来源：发改委
+                        </div>
+                    </div>
+                    <div class="footerConentList">
+                        <div id="shopPlaceAnalysis"></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="liWaps" style="margin-left: 0.2%;">
+                    <div class="tittle">
+                        <div class="tittleLeft">
+                            <span class="dot"></span>
+                            <span class="from">娱乐场所统计</span>
+                        </div>
+                        <div class="tittleRight">
+                            数据来源：发改委
+                        </div>
+                    </div>
+                    <div class="footerConentList">
+                        <div id="entertainmentPalaceAnalysis"></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="liWaps" style="width: 97%;">
+                    <div class="tittle">
+                        <div class="tittleLeft">
+                            <span class="dot"></span>
+                            <span class="from">新型业态统计</span>
+                        </div>
+                        <div class="tittleRight">
+                            数据来源：发改委
+                        </div>
+                    </div>
+                    <div class="footerConentList">
+                        <div id="newBusinessAnalysis"></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="liWaps">
+                    <div class="tittle">
+                        <div class="tittleLeft">
+                            <span class="dot"></span>
+                            <span class="from">乡村旅游统计</span>
+                        </div>
+                        <div class="tittleRight">
+                            数据来源：发改委
+                        </div>
+                    </div>
+                    <div class="footerConentList">
+                        <div id="countryTirvalAnalysis"></div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="../js/url.js"></script>
+<script src="../js/map.js"></script>
+<script src="./baseDataAnalysis.js"></script>
+<script src="../js/lijiang.js"></script>
+<script src="../js/nav.js"></script>
+</body>
+</html>

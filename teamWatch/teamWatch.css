@@ -1,0 +1,805 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.baseDataAnalysis {
+    width: 100%;
+    height: 100%;
+    background: url("../publicStyle/image/baseDataAnalysis/team/teams.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.header {
+    width: 99%;
+    margin-left: 0.5%;
+    height: 11.5%;
+    display: flex;
+    align-items: center;
+}
+
+.headerWap {
+    width: 88%;
+    margin-left: 6%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.headerWap .headerLeft {
+    width: 24.2%;
+    height: 100%;
+    margin-left: 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerWap .headerLeft .index {
+    flex: 1;
+    height: 30px;
+    background: url("../publicStyle/image/index.png");
+    background-size: 100% 100%;
+
+}
+
+.headerWap .headerLeft .basicData {
+    flex: 1;
+    height: 30px;
+    margin-left: 3%;
+    height: 30px;
+    background: url("../publicStyle/image/basicData.png");
+    background-size: 100% 100%;
+
+}
+
+.headerWap .headerLeft .secentAnalysis {
+    flex: 1;
+    height: 30px;
+    margin-left: 3%;
+    height: 30px;
+    background: url("../publicStyle/image/secenyAnalysis.png");
+    background-size: 100% 100%;
+
+}
+
+.headerWap .headerLeft .roomAnalysis {
+    flex: 1;
+    height: 30px;
+    margin-left: 3%;
+    height: 30px;
+    background: url("../publicStyle/image/hotelAnalysis.png");
+    background-size: 100% 100%;
+
+}
+
+.headerWap .headerCenter {
+    width: 39.8%;
+    height: 100%;
+}
+
+.headerWap .headerRight {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerWap .headerRight .holidayAnalysis {
+    flex: 1;
+    height: 30px;
+    height: 30px;
+    background: url("../publicStyle/image/hilidayAnalisis.png");
+    background-size: 100% 100%;
+}
+
+.headerWap .headerRight .tirvalFace {
+    flex: 1;
+    height: 30px;
+    margin-left: 3%;
+    height: 30px;
+    background: url("../publicStyle/image/tirvalorProrait.png");
+    background-size: 100% 100%;
+
+}
+
+.headerWap .headerRight .teamWatch {
+    flex: 1;
+    height: 30px;
+    margin-left: 3%;
+    height: 30px;
+    background: url("../publicStyle/image/teamWatch.png");
+    background-size: 100% 100%;
+
+}
+
+.headerWap .headerRight .seceryWatch {
+    flex: 1;
+    height: 30px;
+    margin-left: 3%;
+    height: 30px;
+    background: url("../publicStyle/image/operateWatch.png");
+    background-size: 100% 100%;
+
+}
+
+.content {
+    width: 99%;
+    height: 87.5%;
+    margin-left: 0.5%;
+    background-color: #fff;
+}
+
+.contents {
+    width: 100%;
+    height: 66%;
+}
+
+.baseDataAnalysis .content .contents .wapList {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.baseDataAnalysis .contents .wapList .left {
+    flex: 1;
+    height: 100%;
+}
+
+.baseDataAnalysis .contents .wapList .left .top {
+    width: 100%;
+    height: 50%;
+
+}
+
+.allPageWap {
+    width: 99%;
+    height: 98%;
+    margin-top: 1%;
+    border-top: 2px solid #35539e;
+    border-bottom: 2px solid #35539e;
+    border-left: 1px solid #35539e;
+    border-right: 1px solid #35539e;
+
+}
+
+.allpageTitle {
+    width: 100%;
+    height: 8%;
+    display: flex;
+    justify-content: space-between;
+    background: #e9effd;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.allpageTitle .allpageTitleLeft {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.allpageTitle .allpageTitleLeft .allpageTitleDot {
+    width: 4px;
+    height: 15px;
+    background: #2c63da;
+    margin-left: 6px;
+}
+
+.allpageTitle .allpageTitleLeft .allpageTitleDetail {
+    font-size: 15px !important;
+    color: #6394fa;
+    margin-left: 5px;
+    font-weight: bolder;
+}
+
+.allpageTitle .allpageTitleRight {
+    color: #6394FA;
+    font-size: 15px !important;
+    margin-right: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.allPageContent .Title {
+    width: 100%;
+    height: 30px;
+    background-color: #b3c1d9;
+    display: flex;
+    justify-content: space-between;
+    line-height: 30px;
+    margin-top: 2%;
+}
+
+.allPageContent .Title .PageTitle {
+    width: 95%;
+    height: 100%;
+    margin-left: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*序号*/
+.numberBox {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.allPageContent .numberBox .number {
+    width: 15%;
+    height: 100%;
+}
+
+.allPageContent .numberBox .number div {
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    border-radius: 5px;
+    margin-top: 2px;
+    line-height: 25px;
+    text-align: center;
+    color: #fff;
+}
+
+.allPageContent .numberBox .number div:nth-child(1) {
+    background-color: #ffc316;
+}
+
+.allPageContent .numberBox .number div:nth-child(2) {
+    background-color: #06fba9;
+}
+
+.allPageContent .numberBox .number div:nth-child(3) {
+    background-color: #128aff;
+}
+
+.allPageContent .number div:nth-child(n+4) {
+    background-color: #0ecdf8;
+}
+
+/*出境目的地TOP5*/
+.allPageContent .place {
+    margin-top: 1%;
+}
+
+.allPageContent .place div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 3px;
+    padding-left: 10%;
+}
+
+.allPageContent .texts {
+    width: 30%;
+    height: 100%;
+}
+
+.texts div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 3px;
+    margin-top: 1%;
+    padding-left: 20%;
+}
+
+.allPageContent .numberOf {
+    width: 18%;
+    height: 100%;
+}
+
+.allPageContent .numberOf div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 3px;
+    padding-left: 60%;
+}
+
+/*接待团队客源地*/
+.baseDataAnalysis .contents .wapList .left .bottom {
+    width: 100%;
+    height: 50%;
+    margin-top: 1%;
+}
+
+.baseDataAnalysis .contents .wapList .left .bottom .allPageContent {
+    width: 100%;
+    height: 100%;
+}
+
+.baseDataAnalysis .contents .wapList .left .bottom .allPageContent .numberBox {
+    width: 100%;
+    height: 100%;
+}
+
+.baseDataAnalysis .contents .wapList .left .bottom .allPageContent .numberBox .number {
+    /*margin-top: 4%;*/
+    margin-top: 3%;
+}
+
+.baseDataAnalysis .contents .wapList .left .bottom .allPageContent .numberBox .number div {
+    border: 1px solid;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    line-height: 20px;
+    text-align: center;
+    padding: 7%;
+    color: #fff;
+}
+
+.baseDataAnalysis .contents .wapList .left .bottom .allPageContent .numberBox #teamCustomer {
+    width: 100%;
+    height: 100%;
+}
+
+/*中间地图*/
+.baseDataAnalysis .contents .wapList .leftCenter {
+    flex: 3;
+    height: 99.8%;
+    margin-top: 0.5%;
+    border-top: 2px solid #35539e;
+    border-bottom: 2px solid #35539e;
+    border-left: 1px solid #35539e;
+    border-right: 1px solid #35539e;
+}
+
+.leftCenter .date {
+    float: right;
+    margin-top: 0.5%;
+}
+
+.baseDataAnalysis .contents .wapList .leftCenter .image {
+    width: 100%;
+    height: 100%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.baseDataAnalysis .contents .wapList .leftCenter .image .imageBox {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    /*align-self: center;*/
+}
+
+.baseDataAnalysis .contents .wapList .leftCenter .image .imageBox .images {
+    width: 50%;
+    height: 100%;
+}
+
+.baseDataAnalysis .contents .wapList .leftCenter .image .imageBox .images .aaa {
+    background: url("../publicStyle/image/baseDataAnalysis/team/team_01.png") no-repeat;
+    /*background-size: 100% 100%;*/
+    padding-top: 12%;
+    margin-left: 8%;
+    margin-top: 13px;
+}
+
+.baseDataAnalysis .contents .wapList .leftCenter .image .imageBox .images .aaa li:first-child {
+    color: #fff;
+    margin-left: 5%;
+    margin-top: -10px;
+    padding: 5px 0 0 10px;
+}
+.baseDataAnalysis .contents .wapList .leftCenter .image .imageBox .images .aaa:nth-child(2) li:last-child{
+    color: rgba(251, 185, 31, 1);
+}
+.baseDataAnalysis .contents .wapList .leftCenter .image .imageBox .images .aaa li:last-child {
+    text-align: center;
+    color: #20cbed;
+    font-family: "Digital-7 Mono";
+    font-size: 32px;
+    padding: 10px 0 10px 0;
+}
+
+.baseDataAnalysis .contents .wapList .leftCenter .image .imageBox .images2 {
+    width: 50%;
+    height: 100%;
+}
+
+.baseDataAnalysis .contents .wapList .leftCenter .image .imageBox .images2 .aaa {
+    background: url("../publicStyle/image/baseDataAnalysis/team/team_01.png") no-repeat;
+    /*background-size: 100% 100%;*/
+    padding-top: 12%;
+    margin-left: 8%;
+    margin-top: 13px;
+    color: #20cbed;
+}
+
+.baseDataAnalysis .contents .wapList .leftCenter .image .imageBox .images2 .aaa li:first-child {
+    color: #fff;
+    margin-left: 5%;
+    margin-top: -10px;
+    padding: 5px 0 0 10px;
+}
+
+.baseDataAnalysis .contents .wapList .leftCenter .image .imageBox .images2 .aaa li:last-child {
+    text-align: center;
+
+    font-family: "Digital-7 Mono";
+    font-size: 32px;
+    padding: 10px 0 10px 0;
+
+}
+
+.baseDataAnalysis .contents .wapList .leftCenter .image #lijiangmap {
+    width: 60%;
+    height: 370px;
+    /*margin-top: -0.5%;*/
+}
+
+/*团队类型占比*/
+.baseDataAnalysis .contents .wapList .rightCenter {
+    flex: 1;
+    height: 100%;
+}
+
+.baseDataAnalysis .contents .wapList .rightCenter .top {
+    width: 100%;
+    height: 50%;
+}
+
+.allpageTitle .allpageTitleRightCenter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.allpageTitle .allpageTitleRightCenter .allpageTitleDot {
+    width: 4px;
+    height: 15px;
+    background: #2c63da;
+    margin-left: 6px;
+}
+
+.allpageTitle .allpageTitleRightCenter .allpageTitleDetail {
+    font-size: 15px !important;
+    color: #6394fa;
+    margin-left: 5px;
+    font-weight: bolder;
+}
+
+.allpageTitle .allpageTitleRightCenter {
+    color: #6394FA;
+    font-size: 14px !important;
+    margin-right: 3px;
+    display: flex;
+    align-items: center;
+}
+
+/*中间图片高度*/
+.allPageContent {
+    width: 100%;
+    height: 92%;
+}
+
+#visiteAnalysis, #teamtype {
+    width: 100%;
+    height: 100%;
+}
+
+.baseDataAnalysis .contents .wapList .rightCenter .bottom {
+    width: 100%;
+    height: 50%;
+    margin-top: 1%;
+}
+
+/*游行社接待团队排名*/
+.baseDataAnalysis .contents .wapList .right {
+    flex: 1;
+    height: 100.2%;
+    margin-top: 0.1%;
+}
+
+/*.baseDataAnalysis .contents .wapList .right .allPageContent {*/
+/*width: 100%;*/
+/*height: 100%;*/
+/*}*/
+
+.right .allPageContent .numberBox {
+    width: 100%;
+    height: 100%;
+}
+
+.right .allPageContent .numberBox .numbers {
+    width: 20%;
+    height: 100%;
+    padding-top: 10px;
+}
+
+.right .allPageContent .numberBox .numbers div {
+    border: 1px solid;
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    border-radius: 5px;
+    margin-top: 3%;
+    line-height: 20px;
+    text-align: center;
+    padding: 9%;
+    color: #fff;
+}
+
+.right .allPageContent .numberBox .numbers div:nth-child(1) {
+    background-color: #ffc316;
+}
+
+.right .allPageContent .numberBox .numbers div:nth-child(2) {
+    background-color: #06fba9;
+}
+
+.right .allPageContent .numberBox .numbers div:nth-child(3) {
+    background-color: #128aff;
+}
+
+.right .allPageContent .numberBox .numbers div:nth-child(n+4) {
+    background-color: #0ecdf8;
+}
+
+.right .allPageContent .numberBox #teamRanking {
+    width: 100%;
+    height: 100%;
+}
+
+.right .allpageTitle {
+    width: 100%;
+    height: 5% !important;
+}
+
+.baseDataAnalysis .contents .wapList .right .top {
+    width: 100%;
+    height: 101.5%;
+
+}
+
+.allPageWap {
+    width: 99%;
+    height: 98%;
+    margin-top: 1%;
+    border-top: 2px solid #35539e;
+    border-bottom: 2px solid #35539e;
+    border-left: 1px solid #35539e;
+    border-right: 1px solid #35539e;
+
+}
+
+.allpageTitle {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    background: #e9effd;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.allpageTitle .allpageTitleRight .allpageTitleDot {
+    width: 4px;
+    height: 15px;
+    background: #2c63da;
+    margin-left: 6px;
+}
+
+.allpageTitle .allpageTitleRight .allpageTitleDetail {
+    font-size: 15px !important;
+    color: #6394fa;
+    margin-left: 5px;
+    font-weight: bolder;
+}
+
+.allpageTitle .allpageTitleRight {
+    color: #6394FA;
+    font-size: 14px !important;
+    margin-right: 3px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/*.baseDataAnalysis .contents .wapList .right .bottom {*/
+/*width: 100%;*/
+/*height: 50%;*/
+/*margin-top: 1%;*/
+/*}*/
+
+/*底部*/
+.footer {
+    width: 100%;
+    height: 33%;
+    margin-top: 0.3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer li {
+    flex: 1;
+    height: 100%;
+}
+
+.footer li .liWaps {
+    width: 99%;
+    margin-left: 2%;
+    height: 98%;
+    margin-top: 1%;
+    border-top: 2px solid #35549f;
+    border-bottom: 2px solid #35549f;
+    border-left: 1px solid #35549f;
+    border-right: 1px solid #35549f;
+}
+
+.footer li .liWaps:nth-child(1) {
+    margin-left: 0;
+}
+
+.footer li .liWaps .tittle {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    background: #e9effd;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.footer li .liWaps .tittle .tittleLeft {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer li .liWaps .tittle .tittleLeft .dot {
+    width: 4px;
+    height: 15px;
+    background: #2c63da;
+    margin-left: 6px;
+
+}
+
+.footer li .liWaps .tittle .tittleLeft .from {
+    font-size: 15px !important;
+    color: #6394fa;
+    margin-left: 5px;
+    font-weight: bolder;
+}
+
+.footer li .liWaps .tittle .tittleRight {
+    color: #6394FA;
+    font-size: 14px !important;
+    margin-right: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.footer li .liWaps .footerConentList {
+    width: 100%;
+    height: 92%;
+}
+
+/*底部图片的高度*/
+#consumption, #travelTime, #entryNumber, #entryNumber1 {
+    width: 100%;
+    height: 100%;
+}
+
+/*游客性别分析*/
+#secenyAnalysis {
+    width: 100%;
+    height: 80%;
+}
+
+.footerConentList .sexAnaysis {
+    width: 100%;
+    height: 100%;
+}
+
+.footerConentList .sexAnaysis .sex {
+    padding-left: 3%;
+}
+
+#ageAnalysis {
+    width: 100%;
+    height: 100%;
+}
+
+.footerConentList {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerConentList .name {
+    /*width: 35%;*/
+    /*font-size: 14px;*/
+    /*margin-left: 5%;*/
+    /*margin-top: 15%;*/
+}
+
+.footerConentList .name p:nth-child(2) {
+    padding-top: 5%;
+}
+
+.footerConentList .name p:nth-child(3) {
+    padding-top: 5%;
+}
+
+.footerConentList .name p:nth-child(n+4) {
+    padding-top: 5%;
+}
+
+/*!*入境游客来源地Top**/
+
+.footerConentList .numberbox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerConentList .numberbox .number {
+    width: 20%;
+    height: 100%;
+}
+
+.footerConentList .numberbox .number div {
+    border: 1px solid;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    padding: 5px;
+    line-height: 20px;
+    margin-top: 3%;
+    text-align: center;
+    color: #fff;
+}
+
+.footerConentList .numberbox #teamEntrytourist {
+    width: 100%;
+    height: 100%;
+
+}
+
+.footerConentList .numberbox .number div:nth-child(1) {
+    background: #ffc316;
+}
+
+.footerConentList .numberbox .number div:nth-child(2) {
+    background: #06fba9;
+}
+
+.footerConentList .numberbox .number div:nth-child(3) {
+    background: #128aff;
+}
+
+.footerConentList .numberbox .number div:nth-child(n+4) {
+    background: #0ecdf8;
+}
+.mlgb{
+    color: rgba(251, 185, 31, 1);
+}
+.images2 .aaa:nth-child(2) .mlgb{
+    color: #20cbed;
+}

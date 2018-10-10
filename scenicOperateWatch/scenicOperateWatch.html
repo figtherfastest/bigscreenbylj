@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="scenicOperateWatch.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/echarts.min.js"></script>
+<div class="baseDataAnalysis">
+    <div class="header">
+        <ul class="headerWap">
+            <li class="headerLeft">
+                <div class="index"></div>
+                <div class="basicData"></div>
+                <div class="secentAnalysis"></div>
+                <div class="roomAnalysis"></div>
+            </li>
+            <li class="headerCenter"></li>
+            <li class="headerRight">
+                <div class="holidayAnalysis"></div>
+                <div class="tirvalFace"></div>
+                <div class="teamWatch"></div>
+                <div class="seceryWatch"></div>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="map">
+            <div id="lijiangmap"></div>
+        </div>
+        <div class="times">
+            <div class="allpageTitle">
+                <div class="allpageTitleLeft">
+                    <span class="allpageTitleDot"></span>
+                    <span class="allpageTitleDetail">实时情况</span>
+                </div>
+                <div class="allpageTitleRight">数据来源：运营商</div>
+            </div>
+            <ul class="contentHeader" >
+                <li class="senery">景区</li>
+                <li class="rank">景区等级</li>
+                <li class="park">停车位</li>
+                <li class="column">今日累计接待游客</li>
+                <li class="maxWeight">最大承载量</li>
+            </ul>
+            <div class="contentListWap">
+            </div>
+        </div>
+        <div class="operateList">
+            <div class="allpageTitle">
+                <div class="allpageTitleLeft">
+                    <span class="allpageTitleDot"></span>
+                    <span class="allpageTitleDetail">全部地域舆情列表</span>
+                </div>
+                <div class="allpageTitleRight">数据来源：运营商</div>
+            </div>
+            <ul class="contentHeader">
+                <li class="index">序号</li>
+                <li class="tit">舆情标题</li>
+                <li class="putTime">发布时间</li>
+                <li class="column">转发量</li>
+            </ul>
+            <div class="operateListContentWap" id="operateList">
+                <!--<ul class="operateListContent">-->
+                    <!--<li class="index">-->
+                        <!--<span class="in">01</span>-->
+                    <!--</li>-->
+                    <!--<li class="tit">复仇者联盟，一出好戏，我不是药神，你说我牛逼不？</li>-->
+                    <!--<li class="putTime">12.12 12:00:00</li>-->
+                    <!--<li class="column">999</li>-->
+                <!--</ul>-->
+                <!--<ul class="operateListContent">-->
+                    <!--<li class="index">-->
+                        <!--<span class="in">02</span>-->
+                    <!--</li>-->
+                    <!--<li class="tit">复仇者联盟，一出好戏，我不是药神，你说我牛逼不？</li>-->
+                    <!--<li class="putTime">12.12 12:00:00</li>-->
+                    <!--<li class="column">999</li>-->
+                <!--</ul>-->
+                <!--<ul class="operateListContent">-->
+                    <!--<li class="index">-->
+                        <!--<span class="in">03</span>-->
+                    <!--</li>-->
+                    <!--<li class="tit">复仇者联盟，一出好戏，我不是药神，你说我牛逼不？</li>-->
+                    <!--<li class="putTime">12.12 12:00:00</li>-->
+                    <!--<li class="column">999</li>-->
+                <!--</ul>-->
+                <!--<ul class="operateListContent">-->
+                    <!--<li class="index">-->
+                        <!--<span class="in">04</span>-->
+                    <!--</li>-->
+                    <!--<li class="tit">复仇者联盟，一出好戏，我不是药神，你说我牛逼不？</li>-->
+                    <!--<li class="putTime">12.12 12:00:00</li>-->
+                    <!--<li class="column">999</li>-->
+                <!--</ul>-->
+                <!--<ul class="operateListContent">-->
+                    <!--<li class="index">-->
+                        <!--<span class="in">05</span>-->
+                    <!--</li>-->
+                    <!--<li class="tit">复仇者联盟，一出好戏，我不是药神，你说我牛逼不？</li>-->
+                    <!--<li class="putTime">12.12 12:00:00</li>-->
+                    <!--<li class="column">999</li>-->
+                <!--</ul>-->
+                <!--<ul class="operateListContent">-->
+                    <!--<li class="index">-->
+                        <!--<span class="in">06</span>-->
+                    <!--</li>-->
+                    <!--<li class="tit">复仇者联盟，一出好戏，我不是药神，你说我牛逼不？</li>-->
+                    <!--<li class="putTime">12.12 12:00:00</li>-->
+                    <!--<li class="column">999</li>-->
+                <!--</ul>-->
+                <!--<ul class="operateListContent">-->
+                    <!--<li class="index">-->
+                        <!--<span class="in">07</span>-->
+                    <!--</li>-->
+                    <!--<li class="tit">复仇者联盟，一出好戏，我不是药神，你说我牛逼不？</li>-->
+                    <!--<li class="putTime">12.12 12:00:00</li>-->
+                    <!--<li class="column">999</li>-->
+                <!--</ul>-->
+                <!--<ul class="operateListContent">-->
+                    <!--<li class="index">-->
+                        <!--<span class="in">08</span>-->
+                    <!--</li>-->
+                    <!--<li class="tit">复仇者联盟，一出好戏，我不是药神，你说我牛逼不？</li>-->
+                    <!--<li class="putTime">12.12 12:00:00</li>-->
+                    <!--<li class="column">999</li>-->
+                <!--</ul>-->
+                <!--<ul class="operateListContent">-->
+                    <!--<li class="index">-->
+                        <!--<span class="in">09</span>-->
+                    <!--</li>-->
+                    <!--<li class="tit">复仇者联盟，一出好戏，我不是药神，你说我牛逼不？</li>-->
+                    <!--<li class="putTime">12.12 12:00:00</li>-->
+                    <!--<li class="column">999</li>-->
+                <!--</ul>-->
+                <!--<ul class="operateListContent">-->
+                    <!--<li class="index">-->
+                        <!--<span class="in">10</span>-->
+                    <!--</li>-->
+                    <!--<li class="tit">复仇者联盟，一出好戏，我不是药神，你说我牛逼不？</li>-->
+                    <!--<li class="putTime">12.12 12:00:00</li>-->
+                    <!--<li class="column">999</li>-->
+                <!--</ul>-->
+                <!--<ul class="operateListContent">-->
+                    <!--<li class="index">-->
+                        <!--<span class="in">11</span>-->
+                    <!--</li>-->
+                    <!--<li class="tit">复仇者联盟，一出好戏，我不是药神，你说我牛逼不？</li>-->
+                    <!--<li class="putTime">12.12 12:00:00</li>-->
+                    <!--<li class="column">999</li>-->
+                <!--</ul>-->
+                <!--<ul class="operateListContent">-->
+                    <!--<li class="index">-->
+                        <!--<span class="in">12</span>-->
+                    <!--</li>-->
+                    <!--<li class="tit">复仇者联盟，一出好戏，我不是药神，你说我牛逼不？</li>-->
+                    <!--<li class="putTime">12.12 12:00:00</li>-->
+                    <!--<li class="column">999</li>-->
+                <!--</ul>-->
+                <!--<ul class="operateListContent">-->
+                    <!--<li class="index">-->
+                        <!--<span class="in">13</span>-->
+                    <!--</li>-->
+                    <!--<li class="tit">复仇者联盟，一出好戏，我不是药神，你说我牛逼不？</li>-->
+                    <!--<li class="putTime">12.12 12:00:00</li>-->
+                    <!--<li class="column">999</li>-->
+                <!--</ul>-->
+                <!--<ul class="operateListContent">-->
+                    <!--<li class="index">-->
+                        <!--<span class="in">14</span>-->
+                    <!--</li>-->
+                    <!--<li class="tit">复仇者联盟，一出好戏，我不是药神，你说我牛逼不？</li>-->
+                    <!--<li class="putTime">12.12 12:00:00</li>-->
+                    <!--<li class="column">999</li>-->
+                <!--</ul>-->
+                <!--<ul class="operateListContent">-->
+                    <!--<li class="index">-->
+                        <!--<span class="in">15</span>-->
+                    <!--</li>-->
+                    <!--<li class="tit">复仇者联盟，一出好戏，我不是药神，你说我牛逼不？</li>-->
+                    <!--<li class="putTime">12.12 12:00:00</li>-->
+                    <!--<li class="column">999</li>-->
+                <!--</ul>-->
+                <!--<ul class="operateListContent">-->
+                    <!--<li class="index">-->
+                        <!--<span class="in">16</span>-->
+                    <!--</li>-->
+                    <!--<li class="tit">复仇者联盟，一出好戏，我不是药神，你说我牛逼不？</li>-->
+                    <!--<li class="putTime">12.12 12:00:00</li>-->
+                    <!--<li class="column">999</li>-->
+                <!--</ul>-->
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/url.js"></script>
+<script src="../js/require.js"></script>
+<script src="scenicOperateWatch.js"></script>
+<script src="../js/nav.js"></script>
+
+</body>
+</html>

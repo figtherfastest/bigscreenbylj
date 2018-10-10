@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="myChart" class="chart1" style="width:100%; height:100%;"></div>
+</body>
+<script src="../js/china.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script>
+    var chart1 = null;
+    $(function () {
+        chart1 = echarts.init($(".chart1").get(0));
+    });
+    setTimeout(function () {
+        option = {
+            title: {
+                text: '| 游客消费分析',
+                subtext: '',
+                x: 'center',
+                textStyle: {
+                    color: '#057bff',
+                    x: 50,
+                    y: 10
+                }
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            legend: {
+                x: 'center',
+                y: 'bottom',
+                data: []
+            },
+            label: {
+                normal: {
+                    show: true,
+                    formatter: '{d}%'
+                }
+            },
+            calculable: true,
+            series: [
+                {
+                    name: '消费分析',
+                    type: 'pie',
+                    radius: [50, 110],
+                    center: ['50%', '50%'],
+                    roseType: 'area',
+                    labelLine: {
+                        normal: {
+                            length: 10
+                        }
+                    },
+                    data: [
+                        {value: 35, name: '6000以上', itemStyle: {color: '#fc7600'}},
+                        {value: 20, name: '5000-6000', itemStyle: {color: '#fca400'}},
+                        {value: 25, name: '4000-5000', itemStyle: {color: '#fec400'}},
+                        {value: 15, name: '3000-4000', itemStyle: {color: '#4c6ffc'}},
+                        {value: 5, name: '300-2000', itemStyle: {color: '#4997fc'}},
+                        {value: 10, name: '2000以下', itemStyle: {color: '#4bdaac'}},
+                    ]
+                }
+            ]
+        };
+        chart1.setOption(option);
+    })
+</script>
+</html>

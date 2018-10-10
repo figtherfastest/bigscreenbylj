@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天气详情</title>
+    <link rel="stylesheet" href="weather.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+<script src="../echarts/js/jquery.min.js"></script>
+<script src="../echarts/js/echarts.min.js"></script>
+<script src="../echarts/js/china.js"></script>
+<div class="baseDataAnalysis">
+    <div class="header">
+        <ul class="headerWap">
+            <li class="headerLeft">
+                <div class="index"></div>
+                <div class="basicData"></div>
+                <div class="secentAnalysis"></div>
+                <div class="roomAnalysis"></div>
+            </li>
+            <li class="headerCenter"></li>
+            <li class="headerRight">
+                <div class="holidayAnalysis"></div>
+                <div class="tirvalFace"></div>
+                <div class="teamWatch"></div>
+                <div class="seceryWatch"></div>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="contents">
+            <div class="topBox wapList" id="firstRow">
+                <ul class="text" id="ul1">
+                    <li id="firstrowImg1">今天 星期四 08月02日</li>
+                    <li class="weatherPic">
+                        <img src="../publicStyle/image/baseDataAnalysis/weatherPic/rain2.png" alt="">
+                        <img src="../publicStyle/image/baseDataAnalysis/weatherPic/rain2.png" alt="">
+                    </li>
+                    <li>中雨</li>
+                    <li>32℃~25℃无持续风向</li>
+                    <li>实时空气质量：<span>20优</span>
+                    </li>
+                </ul>
+                <div class="solids"></div>
+                <ul class="text2" id="ul2">
+                    <li>明天</li>
+                    <li>2018-08-03</li>
+                    <li class="weatherPic">
+                        <img src="../publicStyle/image/baseDataAnalysis/weatherPic/rain2.png" alt="">
+                        <img src="../publicStyle/image/baseDataAnalysis/weatherPic/rain2.png" alt="">
+                    </li>
+                    <li>中雨</li>
+                    <li>32℃~25℃</li>
+                    <li>无持续风向</li>
+                </ul>
+                <div class="solids" style="margin-left:2%;"></div>
+                <ul class="text2" id="ul3">
+                    <li>后天</li>
+                    <li>2018-08-03</li>
+                    <li class="weatherPic">
+                        <img src="../publicStyle/image/baseDataAnalysis/weatherPic/rain2.png" alt="">
+                        <img src="../publicStyle/image/baseDataAnalysis/weatherPic/rain2.png" alt="">
+                    </li>
+                    <li>中雨</li>
+                    <li>32℃~25℃</li>
+                    <li>无持续风向</li>
+                </ul>
+                <div class="solids" style="margin-left:2%;"></div>
+                <ul class="text2" id="ul4">
+                    <li>星期日</li>
+                    <li>2018-08-03</li>
+                    <li class="weatherPic">
+                        <img src="../publicStyle/image/baseDataAnalysis/weatherPic/rain2.png" alt="">
+                        <img src="../publicStyle/image/baseDataAnalysis/weatherPic/rain2.png" alt="">
+                    </li>
+                    <li>中雨</li>
+                    <li>32℃~25℃</li>
+                    <li>无持续风向</li>
+                </ul>
+                <div class="solids" style="margin-left:2%;"></div>
+                <ul class="text2" id="ul5">
+                    <li>星期一</li>
+                    <li>2018-08-03</li>
+                    <li class="weatherPic">
+                        <img src="../publicStyle/image/baseDataAnalysis/weatherPic/rain2.png" alt="">
+                        <img src="../publicStyle/image/baseDataAnalysis/weatherPic/rain2.png" alt="">
+                    </li>
+                    <li>中雨</li>
+                    <li>32℃~25℃</li>
+                    <li>无持续风向</li>
+                </ul>
+                <div class="solids" style="margin-left:2%;"></div>
+                <ul class="text2" id="ul4">
+                    <li>星期二</li>
+                    <li>2018-08-03</li>
+                    <li class="weatherPic">
+                        <img src="../publicStyle/image/baseDataAnalysis/weatherPic/rain2.png" alt="">
+                        <img src="../publicStyle/image/baseDataAnalysis/weatherPic/rain2.png" alt="">
+                    </li>
+                    <li>中雨</li>
+                    <li>32℃~25℃</li>
+                    <li>无持续风向</li>
+                </ul>
+            </div>
+            <ul class="wapList">
+                <li class="left">
+                    <div class="bottom">
+                        <div class="line">
+                            <div class="allPageWap">
+                                <div class="allpageTitle">
+                                    <div class="allpageTitleLeft">
+                                        <span class="allpageTitleDot"></span>
+                                        <span class="allpageTitleDetail">过去12小时气温情况</span>
+                                    </div>
+                                    <div class="allpageTitleRight">数据来源：运营商</div>
+                                </div>
+                                <div class="allPageContent">
+                                    <div id="weatherBar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="leftCenter">
+                    <div class="bottom">
+                        <div class="line">
+                            <div class="allPageWap">
+                                <div class="allpageTitle">
+                                    <div class="allpageTitleLeft">
+                                        <span class="allpageTitleDot"></span>
+                                        <span class="allpageTitleDetail">过去六小时气压情况</span>
+                                    </div>
+                                    <div class="allpageTitleRight">数据来源：运营商</div>
+                                </div>
+                                <div class="allPageContent">
+                                    <div id="weatherLines"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bar">
+                            <div class="allPageWap">
+                                <div class="allpageTitle">
+                                    <div class="allpageTitleLeft">
+                                        <span class="allpageTitleDot"></span>
+                                        <span class="allpageTitleDetail">过去六小时湿度情况</span>
+                                    </div>
+                                    <div class="allpageTitleRight">数据来源：运营商</div>
+                                </div>
+                                <div class="allPageContent">
+                                    <div id="wartersLines"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="right">
+                    <div class="bottom">
+                        <div class="line">
+                            <div class="allPageWap">
+                                <div class="allpageTitle">
+                                    <div class="allpageTitleLeft">
+                                        <span class="allpageTitleDot"></span>
+                                        <span class="allpageTitleDetail">过去六小时降水量情况</span>
+                                    </div>
+                                    <div class="allpageTitleRight">数据来源：运营商</div>
+                                </div>
+                                <div class="allPageContent">
+                                    <div id="weatherSixTimeAge"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bar">
+                            <div class="allPageWap">
+                                <div class="allpageTitle">
+                                    <div class="allpageTitleLeft">
+                                        <span class="allpageTitleDot"></span>
+                                        <span class="allpageTitleDetail">过去六小时风力情况</span>
+                                    </div>
+                                    <div class="allpageTitleRight">数据来源：运营商</div>
+                                </div>
+                                <div class="allPageContent">
+                                    <div id="weatherLines1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <ul class="footer">
+            <li class="footerContent">
+                <div class="liWaps">
+                    <div class="tittle">
+                        <div class="tittleLeft">
+                            <span class="dot"></span>
+                            <span class="from">空气质量指数</span>
+                        </div>
+                        <div class="tittleRight">
+                            	数据来源：运营商
+                        </div>
+                    </div>
+                    <div class="footerConentList">
+                        <div id="weatherDashboards"></div>
+                        <div class="ListBox">
+                            <div class="listWap">
+                                <ul class="List">
+                                    <li>PM2.5</li>
+                                    <li>PM10</li>
+                                </ul>
+                                <ul class="List">
+                                    <li>14up/m3</li>
+                                    <li>14up/m3</li>
+                                </ul>
+                                <ul class="List">
+                                    <li>O3</li>
+                                    <li>NO2</li>
+                                </ul>
+                                <ul class="List">
+                                    <li>14up/m3</li>
+                                    <li>14up/m3</li>
+                                </ul>
+                                <ul class="List">
+                                    <li>SO2</li>
+                                    <li>CO</li>
+                                </ul>
+                                <ul class="List">
+                                    <li>14up/m3</li>
+                                    <li>14up/m3</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="footerContent">
+                <div class="liWaps">
+                    <div class="tittle">
+                        <div class="tittleLeft">
+                            <span class="dot"></span>
+                            <span class="from">生活指数</span>
+                        </div>
+                        <div class="tittleRight">
+                            数据来源：运营商
+                        </div>
+                    </div>
+                    <div class="footerConentList footerCenterBox">
+                        <div class="images" id="imags1">
+                            <img src="../publicStyle/image/baseDataAnalysis/weather/weather_01.png" alt="">
+                        </div>
+                        <div class="images" id="imags2">
+                            <img src="../publicStyle/image/baseDataAnalysis/weather/weather_7.png" alt="">
+                        </div>
+                        <div class="images" id="imags3">
+                            <img src="../publicStyle/image/baseDataAnalysis/weather/weather_3.png" alt="">
+                        </div>
+                        <div class="images" id="imags4">
+                            <img src="../publicStyle/image/baseDataAnalysis/weather/weather_4.png" alt="">
+                        </div>
+                        <div class="images" id="imags5" >
+                            <img src="../publicStyle/image/baseDataAnalysis/weather/weather_5.png" alt="">
+                        </div>
+                        <div class="images" id="imags6" styl="position:relative;">
+                            <img src="../publicStyle/image/baseDataAnalysis/weather/weather_6.png" alt="" >
+                            <span style="display:inline-block; position:absolute; margin-left: 130px; margin-top:-50px;"></span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="footerContent">
+                <div class="liWaps">
+                    <div class="tittle">
+                        <div class="tittleLeft">
+                            <span class="dot"></span>
+                            <span class="from">全市4A景区天气</span>
+                        </div>
+                        <div class="tittleRight">
+                            数据来源：运营商
+                        </div>
+                    </div>
+                    <div class="footerConentList">
+                        <div class="s-list" id="lastDiv">
+                            <ul class="list">
+                                <li><img src="../publicStyle/image/baseDataAnalysis/weatherPic/sunny.png"
+                                         style="width:18px; height:18px;"></li>
+                                <li>丽江古城</li>
+                                <li>风力4级</li>
+                                <li>多云12℃-29℃</li>
+                            </ul>
+                            <ul class="list">
+                                <li><img src="../publicStyle/image/baseDataAnalysis/weatherPic/sunny.png"
+                                         style="width:18px; height:18px;"></li>
+                                <li>丽江古城</li>
+                                <li>风力4级</li>
+                                <li>多云12℃-29℃</li>
+                            </ul>
+                            <ul class="list">
+                                <li><img src="../publicStyle/image/baseDataAnalysis/weatherPic/sunny.png"
+                                         style="width:18px; height:18px;"></li>
+                                <li>丽江古城</li>
+                                <li>风力4级</li>
+                                <li>多云12℃-29℃</li>
+                            </ul>
+                            <ul class="list">
+                                <li><img src="../publicStyle/image/baseDataAnalysis/weatherPic/sunny.png"
+                                         style="width:18px; height:18px;"></li>
+                                <li>丽江古城</li>
+                                <li>风力4级</li>
+                                <li>多云12℃-29℃</li>
+                            </ul>
+                            <ul class="list">
+                                <li><img src="../publicStyle/image/baseDataAnalysis/weatherPic/sunny.png"
+                                         style="width:18px; height:18px;"></li>
+                                <li>丽江古城</li>
+                                <li>风力4级</li>
+                                <li>多云12℃-29℃</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+<script src="js/sixtimeago.js"></script>
+<script src="../js/url.js"></script>
+<script src="js/warter.js"></script>
+<script src="./weather.js"></script>
+<script src="js/dashLine.js"></script>
+<script src="../js/nav.js"></script>
+</html>

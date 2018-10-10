@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #main {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="main" style="width: 100%; height:100%;"></div>
+</body>
+<script src="../js/china.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script>
+    var myChart = echarts.init(document.getElementById('main'));
+    var datas = [220, 182, 191, 234, 290, 325, 225, 190, 300, 240];
+    var max = Math.max.apply(null, datas) / 0.85;
+
+    option = {
+        title: {
+            text: ''
+        },
+        xAxis: {
+            type: 'value',
+            max: max,
+            splitLine: {
+                show: false
+            },
+            axisLabel: {
+                show: false
+            },
+            axisLine: {
+                show: false
+            },
+            axisTick: {
+                show: false
+            }
+        },
+        yAxis: {
+            type: 'category',
+            data: ['江苏省', '湖南省', '河北省', '甘肃省', '湖北省', '广东省', '云南省', '福建省', '北京市', '四川省'],
+            splitLine: {
+                show: false
+            },
+            axisLine: {
+                show: false
+            },
+            axisTick: {
+                show: false,
+            },
+            axisLabel: {
+                show: true,
+                margin: -30,
+                align: 'left',
+                verticalAlign: 'bottom',
+                padding: [0, 0, 15, 0]
+            }
+
+        },
+
+        series: [{
+            type: 'bar',
+            data: datas,
+            barWidth: 10,
+            z: 30,
+            label: {
+                normal: {
+                    show: true,
+                    position: 'left',
+                    //TODO
+                    offset: [1200, 30],
+                    formatter: '{c}'
+                }
+            },
+            itemStyle: {
+                normal: {
+                    barBorderRadius: 4,
+                    color: '#0ecdf8'
+                }
+            }
+        }, {
+            type: 'bar',
+            data: [max, max, max, max, max, max, max, max, max, max],
+            barWidth: 10,
+            barGap: '-90%',
+            label: {
+                normal: {
+                    show: false
+                }
+            },
+            itemStyle: {
+                normal: {
+                    barBorderRadius: 20,
+                    color: '#def1ff'
+                }
+            }
+        }]
+    };
+    myChart.setOption(option);
+</script>
+</html>

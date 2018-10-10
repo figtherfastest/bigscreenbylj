@@ -1,0 +1,439 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    /*overflow-y: hidden;*/
+}
+
+.baseDataAnalysis {
+    width: 100%;
+    height: 100%;
+    background: url("../publicStyle/image/baseDataAnalysis/weather/weather.jpg") no-repeat;
+    background-size: 100% 100%;
+
+}
+
+/*第一部分*/
+.baseDataAnalysis .content .contents .wapList {
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+
+.topBox {
+    border: 1px solid #000000;
+    border-top: 2px solid #35539e;
+    border-bottom: 2px solid #35539e;
+    display: flex;
+    justify-content: space-between;
+}
+
+.topBox .text {
+    margin-top: 1%;
+    width: 100%;
+    text-align: center;
+}
+
+.topBox .text li:nth-child(1) {
+    color: #5993fd;
+    font-weight: bold;
+}
+
+.topBox .text li:nth-child(n+2) {
+    color: #5993fd;
+}
+
+.topBox .text li:nth-child(4) {
+    padding-top: 2%;
+}
+
+.topBox .text li:nth-child(5) span {
+    background-color: #6bcd07;
+    color: #fff;
+    display: inline-block;
+    width: 80px;
+    border-radius: 4px;
+}
+
+.topBox .text .weatherPic {
+    display: flex;
+    justify-content: center;
+}
+
+.topBox .text .weatherPic img {
+    padding: 2%;
+}
+
+/*.topBox .text .weatherPic img:first-child {*/
+/*color: #fc8319;*/
+/*}*/
+
+.topBox .text2 {
+    width: 100%;
+    height: 100%;
+}
+.text2 .weekDays{
+    width: 100%;
+    height: 18%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    color: RGBA(89, 147, 253, 1);
+    font-size: 18px;
+    font-weight: bold;
+}
+.text2 .weekDays .dates{
+    margin-right: 2%;
+}
+.text2 .weekDays .weeks{
+    margin-left: 2%;
+}
+.text2 .weatherPic{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text2 .weather{
+    width: 100%;
+    height: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: RGBA(89, 147, 253, 1);
+    font-size: 18px;
+    font-weight: bold;
+}
+.text2 .temporary{
+    width: 100%;
+    height: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: RGBA(89, 147, 253, 1);
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 3%;
+}
+.text2 .wind{
+    width: 100%;
+    height: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: RGBA(89, 147, 253, 1);
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 2%;
+}
+.text2 .quality{
+    width: 100%;
+    height: 13%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+.text2 .quality .airQuality{
+    font-size: 16px;
+    margin-right: 1%;
+    color: RGBA(89, 147, 253, 1);
+    font-weight: bold;
+}
+.text2 .quality .googOrBad{
+    font-size: 16px;
+    margin-left: 1%;
+    width: 30%;
+    height: 80%;
+    margin-top: 1%;
+    background: RGBA(107, 205, 7, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.topBox .solids {
+    border: 1px solid #057bff;
+    height: 150px;
+    margin-top: 1%;
+}
+
+.baseDataAnalysis .contents .wapList .left {
+    flex: 1;
+    height: 100%;
+}
+
+/*过去12小时气温情况*/
+.baseDataAnalysis .contents .wapList .left .bottom {
+    width: 100%;
+    height: 94.5%;
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #35539e;
+    border-bottom: 2px solid #35539e;
+    border-left: 1px solid #35539e;
+    border-right: 1px solid #35539e;
+}
+
+#weatherBar, #weatherSixTimeAge {
+    width: 100%;
+    height: 100%;
+}
+
+#wartersLines, #warterLines, #weatherLines, #weatherLines1 {
+    width: 100%;
+    height: 119%;
+}
+
+.baseDataAnalysis .contents .wapList .left .bottom > div {
+    flex: 1;
+    height: 100%;
+}
+
+.baseDataAnalysis .contents .wapList .left .bottom .allPageWap {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    border: none;
+}
+
+/*过去6小时气压情况*/
+.baseDataAnalysis .contents .wapList .leftCenter .bottom .allPageWap {
+    /*margin-top: 0;*/
+    width: 98%;
+}
+
+.baseDataAnalysis .contents .wapList .leftCenter {
+    flex: 1;
+    height: 100%;
+    margin-left: 0.3%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.baseDataAnalysis .contents .wapList .leftCenter .bottom {
+    width: 100%;
+    height: 96%;
+    margin-top: 0.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.baseDataAnalysis .contents .wapList .leftCenter .bottom > div {
+    flex: 1;
+    height: 100%;
+}
+
+.contents .wapList .leftCenter .bottom > div {
+    flex: 1;
+    height: 100%;
+}
+
+/*过去6小时降水量情况*/
+.baseDataAnalysis .contents .wapList .rightCenter {
+    flex: 1;
+    height: 100%;
+}
+
+.baseDataAnalysis .contents .wapList .right {
+    flex: 1;
+    height: 100%;
+}
+
+.contents .wapList .right .bottom .allPageWap {
+    width: 98%;
+}
+
+.contents .wapList .right .bottom {
+    width: 101%;
+    height: 96%;
+    margin-top: 0.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contents .wapList .right .bottom > div {
+    flex: 1;
+    height: 100%;
+}
+
+/*.footer {*/
+/*width: 100%;*/
+/*height: 100%;*/
+/*}*/
+
+.footerContent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 0.1%;
+    border-top: 2px solid #35539e;
+    border-bottom: 2px solid #35539e;
+    border-left: 1px solid #35539e;
+    border-right: 1px solid #35539e;
+}
+
+.footerContent:last-child {
+    margin-right: 0;
+}
+
+.footerContent .liWaps {
+    width: 50%;
+    height: 100%;
+    border: none !important;
+}
+
+/*footer第一幅图*/
+.footerConentList #weatherDashboards {
+    width: 50%;
+    height: 100%;
+}
+
+.footerConentList {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerConentList .ListBox {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footerConentList .ListBox .listWap{
+    width: 85%;
+    height: 90%;
+}
+.footerConentList .List {
+    width: 100%;
+    height: 16%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.footerConentList .List li{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+.footerConentList .List:nth-child(odd){
+    color: RGBA(249, 252, 0, 1);
+}
+.footerConentList .List:nth-child(even){
+     color:#fff;
+ }
+.footerConentList .List li:nth-child(1){
+     border-right: 1px solid white;
+ }
+/*footer第二幅图*/
+.footerCenterBox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footerContent .footerCenterBox .images {
+    width: 32%;
+    margin-left: 1%;
+    margin-top: 0.5%;
+}
+
+.footerContent .footerCenterBox .images img {
+    width: 100%;
+    height: 100%;
+}
+
+.footerConentList .List:nth-child(1) {
+    background-color: #5895ff;
+}
+
+.footerConentList .List:nth-child(2) {
+    background-color: #81adff;
+}
+
+.footerConentList .List:nth-child(3) {
+    background-color: #5895ff;
+}
+
+.footerConentList .List:nth-child(4) {
+    background-color: #81adff;
+}
+
+.footerConentList .List:nth-child(5) {
+    background-color: #5895ff;
+}
+
+.footerConentList .List:nth-child(6) {
+    background-color: #81adff;
+}
+
+/*footer全市4A景区*/
+.footerConentList .list {
+    width: 96%;
+    height: 18%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2%;
+}
+
+.footerConentList .s-list {
+    width: 100%;
+    height: 100%;
+    margin-top: 1%;
+}
+
+.footerConentList .list li {
+    padding: 5.5px;
+}
+
+.footerConentList .s-list .list li:first-child {
+    margin-left: 2%;
+}
+
+.footerConentList .s-list .list:nth-child(1) {
+    background-color: #5895ff;
+}
+
+.footerConentList .s-list .list:nth-child(2) {
+    background-color: #81adff;
+}
+
+.footerConentList .s-list .list:nth-child(3) {
+    background-color: #5895ff;
+}
+
+.footerConentList .s-list .list:nth-child(4) {
+    background-color: #81adff;
+}
+
+.footerConentList .s-list .list:nth-child(5) {
+    background-color: #5895ff;
+}
+
+
+
+

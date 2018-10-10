@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>产业监测数据平台</title>
+    <link rel="stylesheet" href="index.css">
+    <!--<link rel="stylesheet" href="../../publicStyle/css/common.css">-->
+    <!--<link rel="stylesheet" href="../publicStyle/css/common.css">-->
+</head>
+<body>
+<script src="../js/china.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<div class="baseDataAnalysis">
+    <div class="header">
+        <ul class="headerWap">
+            <li class="headerLeft">
+                <div class="index"></div>
+                <div class="basicData"></div>
+                <div class="secentAnalysis"></div>
+                <div class="roomAnalysis"></div>
+            </li>
+            <li class="headerCenter"></li>
+            <li class="headerRight">
+                <div class="holidayAnalysis"></div>
+                <div class="tirvalFace"></div>
+                <div class="teamWatch"></div>
+                <div class="seceryWatch"></div>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="contents">
+            <ul class="wapList">
+                <li class="left">
+                    <div class="top">
+                        <div class="allPageWap">
+                            <div class="allpageTitle">
+                                <div class="allpageTitleLeft">
+                                    <span class="allpageTitleDot"></span>
+                                    <span class="allpageTitleDetail">客源地分析排行TOP10</span>
+                                </div>
+                                <div class="allpageTitleRight">数据来源：运营商</div>
+                            </div>
+                            <div class="allPageContent">
+                                <div class="progress">
+                                    <div class="number">
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>3</div>
+                                        <div>4</div>
+                                        <div>5</div>
+                                        <div>6</div>
+                                        <div>7</div>
+                                        <div>8</div>
+                                        <div>9</div>
+                                        <div>10</div>
+                                    </div>
+                                    <div id="customerTop"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="leftCenter">
+                    <div class="top">
+                        <div class="allPageWap">
+                            <div class="allpageTitle">
+                                <div class="allpageTitleLeft">
+                                    <span class="allpageTitleDot"></span>
+                                    <span class="allpageTitleDetail">各省游客消费排行榜TOP10</span>
+                                </div>
+                                <div class="allpageTitleRight">数据来源:运营商</div>
+                            </div>
+                            <div class="allPageContent">
+                                <div id="indexPie"></div>
+                                <div id="indexBar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="leftCenter3">
+                    <div class="top">
+                        <div class="allPageWap">
+                            <div class="allPageContent">
+                                <div class="maps">
+                                    <div class="image">
+                                        <div class="imgs">
+                                            <img src="../publicStyle/image/baseDataAnalysis/index/img_01.png" alt="">
+                                            <div class="title">
+                                                <p>星期一</p>
+                                                <p>今天白天</p>
+                                                <p>
+                                                    <img src="../publicStyle/image/baseDataAnalysis/weatherPic/duoyun.png "
+                                                         alt=""></p>
+                                                <p>10℃</p>
+                                                <p>多云</p>
+                                            </div>
+                                            <div class="titles">
+                                                <p>2018.08.06</p>
+                                                <p>今天夜间</p>
+                                                <p>
+                                                    <img src="../publicStyle/image/baseDataAnalysis/weatherPic/duoyunqing.png ">
+                                                </p>
+                                                <p>7℃</p>
+                                                <p>多云转晴</p>
+                                            </div>
+                                        </div>
+                                        <div class="img2">
+                                            <img src="../publicStyle/image/baseDataAnalysis/index/img_2.png" alt="">
+                                            <div class="title2">
+                                                <p>本月客流量(人)</p>
+                                                <p class="fonts">3113231人</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="lijiangmap"></div>
+                                </div>
+                                <div class="bottomImg">
+                                    <ul class="img3">
+                                        <li>今日客流(人)</li>
+                                        <li>3231321人</li>
+                                    </ul>
+                                    <ul class="img3">
+                                        <li>今日航班(人)</li>
+                                        <li style="color:#FBB91F;">3231321人</li>
+                                    </ul>
+                                    <ul class="img3">
+                                        <li>今日火车(人)</li>
+                                        <li>3231321人</li>
+                                    </ul>
+                                    <ul class="img3">
+                                        <li>今日大巴(人)</li>
+                                        <li>3231321人</li>
+                                    </ul>
+                                    <ul class="img3">
+                                        <li>其他交通方式(人)</li>
+                                        <li>3231321人</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="rightCenter">
+                    <div class="top">
+                        <div class="allPageWap">
+                            <div class="allpageTitle">
+                                <div class="allpageTitleRightCenter">
+                                    <span class="allpageTitleDot"></span>
+                                    <span class="allpageTitleDetail">热门景区客流量排行TOP10</span>
+                                </div>
+                                <div class="allpageTitleRightCenter">数据来源:运营商</div>
+                            </div>
+                            <div class="allPageContent">
+                                <div class="progress">
+                                    <div class="number">
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>3</div>
+                                        <div>4</div>
+                                        <div>5</div>
+                                        <div>6</div>
+                                        <div>7</div>
+                                        <div>8</div>
+                                        <div>9</div>
+                                        <div>10</div>
+                                    </div>
+                                    <div id="trafficRanking"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="right">
+                    <div class="top">
+                        <div class="allPageWap">
+                            <div class="allpageTitle">
+                                <div class="allpageTitleRight">
+                                    <span class="allpageTitleDot"></span>
+                                    <span class="allpageTitleDetail">丽江市舆情排行</span>
+                                </div>
+                                <!--<div class="allpageTitleRight">数据来源:旅发委</div>-->
+                            </div>
+                            <div class="allPageContent">
+                                <div class="headertitle">
+                                    <div class="titles">
+                                        <div>排行</div>
+                                        <div>新闻标题</div>
+                                        <div>转发量</div>
+                                    </div>
+                                </div>
+                                <div class="numberBox">
+                                    <div class="number">
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>3</div>
+                                        <div>4</div>
+                                        <div>5</div>
+                                        <div>6</div>
+                                        <div>7</div>
+                                        <div>8</div>
+                                        <div>9</div>
+                                        <div>10</div>
+                                    </div>
+                                    <div class="texts">
+                                        <div>24位副国级为奥卡福fghg</div>
+                                        <div>24位副国级为奥卡福</div>
+                                        <div>24位副国级为奥卡福</div>
+                                    </div>
+                                    <div class="zhuanfaliang">
+                                        <div>12351</div>
+                                        <div>12351</div>
+                                        <div>12351</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+        <ul class="footer">
+            <li>
+                <div class="liWaps">
+                    <div class="tittle">
+                        <div class="tittleLeft">
+                            <span class="dot"></span>
+                            <span class="from">摄像头1</span>
+                        </div>
+                        <div class="tittleRight">
+                            数据来源：运营商
+                        </div>
+                    </div>
+                    <div class="footerConentList">
+                        <img src="../publicStyle/image/baseDataAnalysis/index/timeContral_01.png"
+                             style="width:100%; height:99%;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="liWaps">
+                    <div class="tittle">
+                        <div class="tittleLeft">
+                            <span class="dot"></span>
+                            <span class="from">摄像头1</span>
+                        </div>
+                        <div class="tittleRight">
+                            数据来源：运营商
+                        </div>
+                    </div>
+                    <div class="footerConentList">
+                        <img src="../publicStyle/image/baseDataAnalysis/index/timeContral_02.png"
+                             style="width:100%; height:99%;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="liWaps">
+                    <div class="tittle">
+                        <div class="tittleLeft">
+                            <span class="dot"></span>
+                            <span class="from">摄像头1</span>
+                        </div>
+                        <div class="tittleRight">
+                            数据来源：运营商
+                        </div>
+                    </div>
+                    <div class="footerConentList">
+                        <img src="../publicStyle/image/baseDataAnalysis/index/timeContral_03.png"
+                             style="width:100%; height:99%;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="liWaps">
+                    <div class="tittle">
+                        <div class="tittleLeft">
+                            <span class="dot"></span>
+                            <span class="from">摄像头1</span>
+                        </div>
+                        <div class="tittleRight">
+                            数据来源：运营商
+                        </div>
+                    </div>
+                    <div class="footerConentList">
+                        <img src="../publicStyle/image/baseDataAnalysis/index/timeContral_01.png"
+                             style="width:100%; height:99%;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="liWaps">
+                    <div class="tittle">
+                        <div class="tittleLeft">
+                            <span class="dot"></span>
+                            <span class="from">摄像头1</span>
+                        </div>
+                        <div class="tittleRight">
+                            数据来源：运营商
+                        </div>
+                    </div>
+                    <div class="footerConentList">
+                        <img src="../publicStyle/image/baseDataAnalysis/index/timeContral_02.png"
+                             style="width:100%; height:99%;">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="liWaps">
+                    <div class="tittle">
+                        <div class="tittleLeft">
+                            <span class="dot"></span>
+                            <span class="from">摄像头1</span>
+                        </div>
+                        <div class="tittleRight">
+                            数据来源：运营商
+                        </div>
+                    </div>
+                    <div class="footerConentList">
+                        <img src="../publicStyle/image/baseDataAnalysis/index/timeContral_03.png"
+                             style="width:100%; height:99%;">
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+<script src="js/trafficRanking.js"></script>
+<script src="js/customerTop.js"></script>
+<script src="js/indexPie.js"></script>
+<script src="js/indexBar.js"></script>
+<script src="../hotelData/js/lijiangMap.js"></script>
+<script src="../js/nav.js"></script>
+</html>

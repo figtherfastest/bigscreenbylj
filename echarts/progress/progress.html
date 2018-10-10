@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+
+    #main {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+<div id="main" style="width: 100%; height:100%;"></div>
+</body>
+<script src="../js/china.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script type="text/javascript">
+  var myChart = echarts.init(document.getElementById('main'));
+
+  //初始化数据
+  var category = ['0-18岁', '19-30岁', '31-40岁', '41-60岁', '60岁以上', '未知'];
+  var barData = [9.02, 21.03, 11.26, 16.35, 6.75, 35.5];
+
+  var option = {
+    title: {
+      text: '',
+      subtext: '单位:%',
+      textStyle: {
+        color: '#057bff',
+      },
+      subtextStyle: {
+        color: '#000'
+      }
+    },
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {
+        type: 'shadow'
+      }
+    },
+    grid: {
+      left: '1%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis: {
+      type: 'value',
+      show: false,//隐藏x轴
+      axisLine: {
+        show: false
+      },
+      axisTick: {
+        show: false
+      },
+      splitLine: {     //去除网格线
+        show: false
+      }
+
+    },
+    yAxis: {
+      type: 'category',
+      data: category,
+      splitLine: {show: false},
+      axisLine: {
+        show: false
+      },
+      axisTick: {
+        show: false
+      },
+      offset: 10,
+      nameTextStyle: {
+        fontSize: 12
+      }
+    },
+    series: [
+      {
+        name: '数量',
+        type: 'bar',
+        data: barData,
+        barWidth: 20,
+        barGap: 10,
+        smooth: false,
+        center: ['33%', '50%'],
+        label: {
+          normal: {
+            show: true,
+            formatter: '{c}%',
+            position: 'insideTop',
+            offset: [5, -2],
+            textStyle: {
+              color: '#000',
+              fontSize: 13
+            }
+          }
+        },
+        itemStyle: {
+          emphasis: {
+            barBorderRadius: 7
+          },
+          normal: {
+            barBorderRadius: 7,
+            color: new echarts.graphic.LinearGradient(
+              0, 0, 1, 0,
+              [
+                {offset: 0, color: '#4ee0fe'},
+                {offset: 1, color: '#0dccf8'}
+
+              ]
+            )
+          }
+        }
+      }
+    ]
+  };
+  myChart.setOption(option);
+</script>
+</html>

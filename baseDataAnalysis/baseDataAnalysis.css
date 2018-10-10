@@ -1,0 +1,331 @@
+.baseDataAnalysis {
+    width: 100%;
+    height: 100%;
+    background: url("../image/baseDataAnalysis/bg.png") no-repeat;
+    background-size: 100% 100%;
+
+}
+
+.baseDataAnalysis .content .contents .wapList {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.baseDataAnalysis .contents .wapList .left {
+    flex: 1;
+    height: 100%;
+}
+
+.baseDataAnalysis .contents .wapList .left .top {
+    width: 100%;
+    height: 50%;
+
+}
+
+.baseDataAnalysis .contents .wapList .left .bottom {
+    width: 100%;
+    height: 50%;
+    margin-top: 1%;
+}
+
+.baseDataAnalysis .contents .wapList .leftCenter {
+    flex: 3;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.baseDataAnalysis .contents .wapList .rightCenter {
+    flex: 1;
+    height: 100%;
+}
+
+.contents .wapList .rightCenter .rightCenterTop {
+    width: 100%;
+    height: 50%;
+}
+
+.contents .wapList .rightCenter .rightCenterBottom {
+    width: 100%;
+    height: 50%;
+}
+
+.baseDataAnalysis .contents .wapList .right {
+    flex: 1;
+    height: 100%;
+}
+
+.baseDataAnalysis .contents .wapList .right .rightTop {
+    width: 100%;
+    height: 50%;
+}
+
+.baseDataAnalysis .contents .wapList .right .rightBottom {
+    width: 100%;
+    height: 50%;
+}
+
+.leftCenter .leftCenterLeft {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftCenter .leftCenterLeft .meansLeft {
+    width: 48%;
+    margin-left: 2%;
+    height: 94%;
+}
+
+.leftCenter .leftCenterLeft li {
+    width: 100%;
+    height: 26%;
+    margin-top: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftCenter .leftCenterLeft li .dataLeft {
+    width: 45%;
+    height: 60%;
+}
+
+.leftCenter .leftCenterLeft li .dataLeft .tit {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 15%;
+    font-size: 14px !important;
+    color: #d9e1f5;
+    text-align: center;
+}
+
+/*.leftCenter .leftCenterLeft li .dataLeft .details{*/
+/**/
+/*}*/
+
+.leftCenter .leftCenterLeft li .dataRight {
+    width: 45%;
+    height: 60%;
+}
+
+.leftCenter .leftCenterLeft li .dataRight .tit {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 15%;
+    font-size: 14px !important;
+    color: #d9e1f5;
+    text-align: center;
+}
+
+.leftCenter .leftCenterLeft li .dataRight .details {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 15%;
+    font-size: 35px !important;
+    color: #eccb23;
+    font-family: "Digital-7 Mono";
+    text-align: center;
+}
+
+.leftCenter .leftCenterLeft li .dataLeft .details {
+    width: 100%;
+    height: 60%;
+    color: #02f4f0;
+    font-family: "Digital-7 Mono";
+    font-size: 35px !important;
+    text-align: left;
+    padding-left: 15%;
+}
+
+.leftCenter .leftCenterLeft li .dataRight {
+    width: 45%;
+    height: 60%;
+}
+
+.leftCenter .leftCenterLeft li:nth-child(1) {
+    margin-top: 2%;
+}
+
+.leftCenter .leftCenterLeft .meansRight {
+    width: 48%;
+    margin-left: 2%;
+    height: 94%;
+}
+
+.leftCenter .leftCenterLeft li {
+    width: 100%;
+    height: 26%;
+    margin-top: 15%;
+    background: url("../image/baseDataAnalysis/dataTittleBg.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.leftCenter .leftCenterLeft li:nth-child(1) {
+    margin-top: 2%;
+}
+
+.leftCenter .leftCenterRight {
+    width: 38%;
+    margin-right: 1%;
+    height: 100%;
+}
+
+/*//1*1*/
+.baseDataAnalysis .contents .wapList .left .top .allPageContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.baseDataAnalysis .contents .wapList .left .top .allPageContent #secenyAnalysis {
+    width: 40%;
+    height: 100%;
+}
+
+.baseDataAnalysis .contents .wapList .left .top .allPageContent #secentCategory {
+    width: 100%;
+    height: 85%;
+}
+
+/*2*1*/
+.baseDataAnalysis .contents .wapList .left .bottom .allPageContent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.baseDataAnalysis .contents .wapList .left .bottom #hotelOperate {
+    width: 40%;
+    height: 100%;
+}
+
+.baseDataAnalysis .contents .wapList .left .bottom #hotelOperateBar {
+    width: 100%;
+    height: 85%;
+}
+
+/*1*5*/
+.baseDataAnalysis .contents .wapList .rightCenter #anyIndustryAnalysis {
+    width: 100%;
+    height: 100%;
+}
+
+/*2*5*/
+.baseDataAnalysis .contents .wapList .rightCenter #anyRegionAnalysis {
+    width: 100%;
+    height: 100%;
+}
+
+/*1*6*/
+.baseDataAnalysis .contents .wapList .right .allPageContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.baseDataAnalysis .contents .wapList #tirvalAgencyAnalysis {
+    width: 40%;
+    height: 100%;
+}
+
+.baseDataAnalysis .contents .wapList #tirvalAgencyAnalysisBar {
+    width: 100%;
+    height: 85%;
+}
+
+/*2*6*/
+.baseDataAnalysis .contents .wapList #tirvalWcAnalysis {
+    width: 40%;
+    height: 100%;
+}
+
+.baseDataAnalysis .contents .wapList #tirvalWcAnalysisBar {
+    width: 100%;
+    height: 85%;
+}
+
+/*.footer>li:nth-child(1){*/
+/*width: 17%!important;*/
+/*}*/
+
+/*FOOTER 1*/
+.footer .footerConentList {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.footer #tourGuideAnalysis {
+    width: 40%;
+    height: 100%;
+}
+
+.footer #tourGuideAnalysisBar {
+    width: 100%;
+    height: 85%;
+}
+
+/*FOOTER 2*/
+.footer #foodPlaceAnalysis {
+    width: 100%;
+    height: 100%;
+}
+
+/*FOOTER 3*/
+.footer #shopPlaceAnalysis {
+    width: 100%;
+    height: 100%;
+}
+
+/*FOOTER 4*/
+.footer #entertainmentPalaceAnalysis {
+    width: 100%;
+    height: 100%;
+}
+
+/*FOOTER 5*/
+.footer #newBusinessAnalysis {
+    width: 100%;
+    height: 100%;
+}
+
+/*FOOTER 6*/
+.footer #countryTirvalAnalysis {
+    width: 100%;
+    height: 100%;
+}
+
+#lijiangmap {
+    width: 100%;
+    height: 100%;
+}
+.barWaps{
+    width: 60%;
+    height: 100%;
+}
+.barWaps .wapTitle{
+    width: 92%;
+    height: 15%;
+    font-size: 21px !important;
+}
+.secentCategory,.hotelOperateBar,.tirvalAgencyAnalysisBar {
+    margin-left: 8%;
+}
+.tourGuideAnalysisBar ,.tirvalWcAnalysisBar{
+    margin-left: 8%;
+}
+.allTotals{
+    font-size: 21px;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #main {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="main" style="width: 100%; height:100%;"></div>
+</body>
+<script src="../js/china.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script>
+    var myChart = echarts.init(document.getElementById('main'));
+    var hideStyle = {
+        normal: {
+            color: '#fff', //未完成的圆环的颜色
+            label: {
+                show: false
+            },
+            labelLine: {
+                show: false
+            }
+        },
+        emphasis: {
+            show: false
+        }
+    };
+    var option = {
+        backgroundColor: '#fff',
+        legend: {
+            orient: 'vertical',
+            data: ['3个景区以上', '2个景区', '1个景区']
+        },
+        series: [{
+            name: 'Line 1',
+            type: 'pie',
+            color: '#487efe',
+            clockWise: false, //顺时针
+            radius: [180, 200],
+            label: {
+                normal: {
+                    show: false,
+                    position: 'inside'
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false,
+                }
+            },
+            hoverAnimation: false,
+            data: [{
+                value: 40,
+                name: '3个景区以上'
+            }, {
+                value: 25,
+                name: 'hide',
+                itemStyle: hideStyle
+            }]
+        }, {
+            name: 'Line 2',
+            type: 'pie',
+            color: '#4ad970',
+            clockWise: false, //顺时针
+            radius: [150, 170],
+            label: {
+                normal: {
+                    show: false,
+                    position: 'inside'
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            hoverAnimation: false,
+            data: [{
+                value: 25,
+                name: '2个景区'
+            }, {
+                value: 35,
+                name: 'hide',
+                itemStyle: hideStyle
+            }]
+        }, {
+            name: 'Line 3',
+            type: 'pie',
+            color: '#fec400',
+            clockWise: false, //顺时针
+            radius: [120, 140],
+            label: {
+                normal: {
+                    show: false,
+                    position: 'inside'
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            hoverAnimation: false,
+            data: [{
+                value: 20,
+                name: '1个景区'
+            }, {
+                value: 45,
+                name: 'hide',
+                itemStyle: hideStyle
+            }]
+        }, {
+            name: 'Line 4',
+            type: 'pie',
+            color: '#36d9fc',
+            clockWise: true, //顺时针
+            radius: [90, 110],
+            label: {
+                normal: {
+                    show: false,
+                    position: 'inside'
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: true
+                }
+            },
+            hoverAnimation: true,
+            data: [{
+                value: 100,
+                name: 'D'
+            }, {
+                value: 0,
+                name: 'hide',
+                itemStyle: {}
+            }]
+        }]
+    };
+    myChart.setOption(option);
+</script>
+</html>

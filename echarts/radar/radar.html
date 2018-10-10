@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+<div id="myChart" class="chart4" style="width:100%; height:100%;"></div>
+</body>
+<script src="../js/china.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script>
+  var chart1 = null;
+  $(function () {
+    chart4 = echarts.init($(".chart4").get(0));
+  });
+  setTimeout(function () {
+    option = {
+      title: {
+        text: '| 游客停留时长分析',
+        textStyle: {
+          color: '#057bff'
+        }
+      },
+      tooltip: {},
+      legend: {
+        data: []
+      },
+      radar: {
+        // shape: 'circle',
+        name: {
+          textStyle: {
+            color: '#000',
+            borderRadius: 3,
+            padding: [3, 5]
+          }
+        },
+        indicator: [
+          {name: '一天', max: 6500},
+          {name: '两天', max: 16000},
+          {name: '三天', max: 30000},
+          {name: '四天', max: 38000},
+          {name: '五天', max: 52000},
+          {name: '五天以上', max: 25000}
+        ]
+      },
+      series: [{
+        type: 'radar',
+        // areaStyle: {normal: {}},
+        data: [
+          {
+            value: [4300, 10000, 28000, 35000, 50000, 19000],
+            name: ''
+          },
+        ]
+      }]
+    };
+    chart4.setOption(option);
+  })
+</script>
+</html>

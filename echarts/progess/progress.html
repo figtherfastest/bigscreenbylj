@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #main {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="main" style="width: 100%; height:100%;"></div>
+</body>
+<script src="../js/china.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('main'));
+    var baifenbi = [0.111, 0.333, 0.444, 0.555, 0.777, 0.888, 0.922, 0.8666, 0.6535, 0.456];
+    var grayBar = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+    var paiming = [7, 6, 5, 4, 3, 2, 1, 2, 3, 5, 6, 4];
+     var zongjine = [91230000, 20000000, 30000000, 40000000, 50000000, 60000000, 70000000,20000000,50000000,40000000];
+    var fenpeijine = [11100000, 200000, 300000, 400000, 500000, 600000, 700000,2000000,500000,400000];
+    var city = ['江苏省', '湖南省', '河北省', '甘肃省', '湖北省 ', '广东省 ', '云南省 ', '福建省', '北京市 ', '四川省'];
+    option = {
+        title: {
+            text: '',
+            left: 'center'
+        },
+        color: ['#61A8FF'], //进度条颜色
+        /* grid: {
+             left: '-10%',  //如果离左边太远就用这个......
+             //right: '14%',
+             bottom: '5%',
+             top: '5%',
+             containLabel: true
+         },*/
+        xAxis: [{
+            show: false,
+        },
+            //由于下边X轴已经是百分比刻度了,所以需要在顶部加一个X轴,刻度是金额,也隐藏掉
+            {
+                show: false,
+            }
+        ],
+        yAxis: {
+            type: 'category',
+            axisLabel: {
+                show: false, //让Y轴数据不显示
+            },
+            itemStyle: {},
+            axisTick: {
+                show: false, //隐藏Y轴刻度
+            },
+            axisLine: {
+                show: false, //隐藏Y轴线段
+            },
+            data: city,
+        },
+        series: [
+            //背景色--------------------我是分割线君------------------------------//
+            {
+                show: true,
+                type: 'bar',
+                barGap: '-100%',
+                barWidth: '30%', //统计条宽度
+                itemStyle: {
+                    normal: {
+                        barBorderRadius: 15,
+                        color: 'rgba(102, 102, 102,0.5)'
+                    },
+                },
+                z: 1,
+                data: grayBar,
+            },
+            //蓝条--------------------我是分割线君------------------------------//
+            {
+                show: true,
+                type: 'bar',
+                barGap: '-100%',
+                barWidth: '30%', //统计条宽度
+                itemStyle: {
+                    normal: {
+                        barBorderRadius: 20, //统计条弧度
+                    },
+                },
+                max: 1,
+                label: {
+                    normal: {
+                        show: false,
+                        textStyle: {
+                            color: '#fff', //百分比颜色
+                        },
+                        position: 'inside',
+                        //百分比格式
+                        // formatter: function (data) {
+                        //     return (baifenbi[data.dataIndex] * 100).toFixed(1) + '%';
+                        // },
+                    }
+                },
+                labelLine: {
+                    show: true,
+                },
+                z: 2,
+                data: baifenbi,
+            },
+            //数据条--------------------我是分割线君------------------------------//
+            {
+                show: true,
+                type: 'bar',
+                xAxisIndex: 1, //代表使用第二个X轴刻度!!!!!!!!!!!!!!!!!!!!!!!!
+                barGap: '-100%',
+                barWidth: '25%', //统计条宽度
+                itemStyle: {
+                    normal: {
+                        barBorderRadius: 20,
+                        color: 'rgba(22,203,115,0.05)'
+                    },
+                },
+                label: {
+                    normal: {
+                        show: true,
+                        //label 的position位置可以是top bottom left,right,也可以是固定值
+                        //在这里需要上下统一对齐,所以用固定值
+                        position: [0, '-100%'],
+                        rich: { //富文本
+                            black: { //自定义颜色
+                                color: '#000',
+                            },
+                            // start2: {
+                            //     backgroundColor: { //这里可以添加你想自定义的图片
+                            //         image: uploadedDataURL2,
+                            //     },
+                            // },
+                            // start1: {
+                            //     backgroundColor: {
+                            //         image: uploadedDataURL1,
+                            //     }
+                            // },
+                            green: {
+                                color: '#70DDA7',
+                            },
+                            yellow: {
+                                color: '#FEC735',
+                            },
+                        },
+                        formatter: function (data) {
+                            //富文本固定格式{colorName|这里填你想要写的内容}
+                            return paiming[data.dataIndex] == 1 ? '{start1|}{yellow|' + paiming[data.dataIndex] + '  ' + city[data.dataIndex] + '}' + '{black|    总金额:}{yellow|' + zongjine[data.dataIndex] / 10000 + '}{black|万元,已分配金额:}' + '{green|' + fenpeijine[data.dataIndex] / 10000 + '万元}' : ' {start2|}{black|' + paiming[data.dataIndex] + '  ' + city[data.dataIndex] + '}' + '{black|总金额:}{yellow|' + zongjine[data.dataIndex] / 10000 + '}{black|万元,已分配金额:}' + '{green|' + fenpeijine[data.dataIndex] / 10000 + '万元}';
+
+                        },
+                    }
+                },
+                 data: zongjine
+            }
+
+        ]
+    };
+    myChart.setOption(option);
+</script>
+</html>

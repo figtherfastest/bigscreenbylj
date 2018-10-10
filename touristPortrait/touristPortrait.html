@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>游客画像</title>
+	<link rel="stylesheet" href="touristPortrait.css">
+	<!--<link rel="stylesheet" href="../../publicStyle/css/common.css">-->
+</head>
+
+<body>
+<script src="../echarts/js/jquery.min.js"></script>
+<script src="../echarts/js/echarts.min.js"></script>
+<script src="../echarts/js/china.js"></script>
+<div class="baseDataAnalysis">
+	<div class="header">
+		<ul class="headerWap">
+			<li class="headerLeft">
+				<div class="index"></div>
+				<div class="basicData"></div>
+				<div class="secentAnalysis"></div>
+				<div class="roomAnalysis"></div>
+			</li>
+			<li class="headerCenter"></li>
+			<li class="headerRight">
+				<div class="holidayAnalysis"></div>
+				<div class="tirvalFace"></div>
+				<div class="teamWatch"></div>
+				<div class="seceryWatch"></div>
+			</li>
+		</ul>
+	</div>
+	<div class="content">
+		<div class="contents">
+			<ul class="wapList">
+				<li class="left">
+					<div class="top">
+						<div class="allPageWap">
+							<div class="allpageTitle">
+								<div class="allpageTitleLeft">
+									<span class="allpageTitleDot"></span>
+									<span class="allpageTitleDetail">游客性别分析</span>
+								</div>
+								<div class="allpageTitleRight">数据来源:--卡通</div>
+							</div>
+							<div class="allPageContent">
+								<div class="sexAnaysis">
+									<div id="secenyAnalysis"></div>
+									<div class="sex" id="sexRatio">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="allPageWap">
+							<div class="allpageTitle">
+								<div class="allpageTitleLeft">
+									<span class="allpageTitleDot"></span>
+									<span class="allpageTitleDetail">游客年龄段分析</span>
+								</div>
+								<div class="allpageTitleRight">数据来源：实验室</div>
+							</div>
+							<div class="allPageContent">
+								<div id="ageAnalysis"></div>
+							</div>
+						</div>
+					</div>
+				
+				</li>
+				<li class="leftCenter" style="display: flex;
+						justify-content: space-between;
+						align-content: center"
+				>
+					<div id="mapChina" style="width:60%; height:100%;"></div>
+					
+					<div class="provinceAnalysis" style="width: 40%;height: 100%">
+						
+						<div class="date">
+							<form name="reg_testdate">
+								<select name="YYYY" id="yearId" onclick="YYYYDD(this.value)">
+									<option value="">请选择 年</option>
+								</select>
+								<select name="MM" id="monthId" onclick="MMDD(this.value)"
+								        onchange="changeTime('yearId','monthId')">
+									<option value="">选择 月</option>
+								</select>
+							</form>
+						</div>
+						<div id="provinceAnalysis"></div>
+					</div>
+				</li>
+				<li class="right">
+					<div class="top">
+						<div class="allPageWap">
+							<div class="allpageTitle">
+								<div class="allpageTitleRight">
+									<span class="allpageTitleDot"></span>
+									<span class="allpageTitleDetail">游客消费分析</span>
+								</div>
+								<div class="allpageTitleRight">数据来源:旅发委</div>
+							</div>
+							<div class="allPageContent">
+								<div id="consumption"></div>
+							</div>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="allPageWap">
+							<div class="allpageTitle">
+								<div class="allpageTitleRight">
+									<span class="allpageTitleDot"></span>
+									<span class="allpageTitleDetail">旅游职业分析</span>
+								</div>
+								<div class="allpageTitleRight">数据来源：公安局</div>
+							</div>
+							<div class="allPageContent">
+								<div id="jobs"></div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<ul class="footer">
+			<li>
+				<div class="liWaps">
+					<div class="tittle">
+						<div class="tittleLeft">
+							<span class="dot"></span>
+							<span class="from">旅游交通数据分析</span>
+						</div>
+						<div class="tittleRight">
+							数据来源：旅发委
+						</div>
+					</div>
+					<div class="footerConentList">
+						<div id="trafficAnalysis"></div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="liWaps">
+					<div class="tittle">
+						<div class="tittleLeft">
+							<span class="dot"></span>
+							<span class="from">游客停留时长分析</span>
+						</div>
+						<div class="tittleRight">
+							数据来源：--卡通
+						</div>
+					</div>
+					<div class="footerConentList">
+						<div id="stayAnalysis"></div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="liWaps">
+					<div class="tittle">
+						<div class="tittleLeft">
+							<span class="dot"></span>
+							<span class="from">出行目的地分析</span>
+						</div>
+						<div class="tittleRight">
+							数据来源：--卡通
+						</div>
+					</div>
+					<div class="footerConentList">
+						<div id="travelAnalysis"></div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="liWaps">
+					<div class="tittle">
+						<div class="tittleLeft">
+							<span class="dot"></span>
+							<span class="from">游客游览景区数据分析</span>
+						</div>
+						<div class="tittleRight">
+							数据来源：旅发委
+						</div>
+					</div>
+					<div class="footerConentList">
+						<div id="scenicSpotData"></div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="liWaps">
+					<div class="tittle">
+						<div class="tittleLeft">
+							<span class="dot"></span>
+							<span class="from">游客住宿情况分析</span>
+						</div>
+						<div class="tittleRight">
+							数据来源：--卡通
+						</div>
+					</div>
+					<div class="footerConentList">
+						<div id="roomAnalysis"></div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="liWaps">
+					<div class="tittle">
+						<div class="tittleLeft">
+							<span class="dot"></span>
+							<span class="from">游客到访频次分析</span>
+						</div>
+						<div class="tittleRight">
+							数据来源：旅发委
+						</div>
+					</div>
+					<div class="footerConentList">
+						<div id="visiteAnalysis"></div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<script language="JavaScript">
+    function YYYYMMDDstart() {
+        MonHead = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        //先给年下拉框赋内容
+        var y = new Date().getFullYear();
+        for (var i = (y - 30); i < (y + 30); i++) //以今年为准，前30年，后30年
+            document.reg_testdate.YYYY.options.add(new Option(" " + i + " 年", i));
+
+        //赋月份的下拉框
+        for (var i = 1; i < 13; i++)
+            document.reg_testdate.MM.options.add(new Option(" " + i + " 月", i));
+
+        document.reg_testdate.YYYY.value = y;
+        document.reg_testdate.MM.value = new Date().getMonth() + 1;
+        var n = MonHead[new Date().getMonth()];
+        if (new Date().getMonth() == 1 && IsPinYear(YYYYvalue)) n++;
+        //writeDay(n); //赋日期下拉框Author:meizz
+        //document.reg_testdate.DD.value = new Date().getDate();
+    }
+
+    if (document.attachEvent)
+        window.attachEvent("onload", YYYYMMDDstart);
+    else
+        window.addEventListener('load', YYYYMMDDstart, false);
+
+    function YYYYDD(str) //年发生变化时日期发生变化(主要是判断闰平年)
+    {
+        var MMvalue = document.reg_testdate.MM.options[document.reg_testdate.MM.selectedIndex].value;
+        if (MMvalue == "") {
+            var e = document.reg_testdate.DD;
+            optionsClear(e);
+            return;
+        }
+        var n = MonHead[MMvalue - 1];
+        if (MMvalue == 2 && IsPinYear(str)) n++;
+        // writeDay(n)
+    }
+
+    function MMDD(str)   //月发生变化时日期联动
+    {
+        var YYYYvalue = document.reg_testdate.YYYY.options[document.reg_testdate.YYYY.selectedIndex].value;
+        if (YYYYvalue == "") {
+            var e = document.reg_testdate.DD;
+            optionsClear(e);
+            return;
+        }
+        var n = MonHead[str - 1];
+        if (str == 2 && IsPinYear(YYYYvalue)) n++;
+        // writeDay(n)
+    }
+
+    function writeDay(n)   //据条件写日期的下拉框
+    {
+        var e = document.reg_testdate.DD;
+        optionsClear(e);
+        for (var i = 1; i < (n + 1); i++) {
+            //e.options.add(new Option(" " + i + " 日", i));
+        }
+
+        function IsPinYear(year)//判断是否闰平年
+        {
+            return (0 == year % 4 && (year % 100 != 0 || year % 400 == 0));
+        }
+    }
+
+    function optionsClear(e) {
+        //e.options.length = 1;
+    }
+</script>
+<script src="../js/url.js"></script>
+<script src="touristPortrait.js"></script>
+<script src="../js/nav.js"></script>
+<script src="../js/china.js"></script>
+<script src="./js/map.js"></script>
+</body>
+
+</html>

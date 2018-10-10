@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>住宿分析</title>
+	<link rel="stylesheet" href="hotelData.css">
+	<link rel="stylesheet" href="../js/laydate/theme/default/laydate.css" media="all">
+	<script src="../js/url.js"></script>
+	<!--<link rel="stylesheet" href="../../publicStyle/css/common.css">-->
+</head>
+<body>
+<script src="../js/calendar.js"></script>
+<script src="../js/calendar_day.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<div class="baseDataAnalysis">
+	<div class="header">
+		<ul class="headerWap">
+			<li class="headerLeft">
+				<div class="index"></div>
+				<div class="basicData"></div>
+				<div class="secentAnalysis"></div>
+				<div class="roomAnalysis"></div>
+			</li>
+			<li class="headerCenter"></li>
+			<li class="headerRight">
+				<div class="holidayAnalysis"></div>
+				<div class="tirvalFace"></div>
+				<div class="teamWatch"></div>
+				<div class="seceryWatch"></div>
+			</li>
+		</ul>
+	</div>
+	<div class="content">
+		<div class="contents">
+			<ul class="wapList">
+				<li class="left">
+					<div class="top">
+						<div class="allPageWap">
+							<div class="allpageTitle">
+								<div class="allpageTitleLeft">
+									<span class="allpageTitleDot"></span>
+									<span class="allpageTitleDetail">景区游客住宿统计</span>
+								</div>
+								<div class="allpageTitleRight">数据来源：旅发委</div>
+							</div>
+							<div class="allPageContent">
+								<div id="roomStatistical"></div>
+							</div>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="allPageWap">
+							<div class="allpageTitle">
+								<div class="allpageTitleLeft">
+									<span class="allpageTitleDot"></span>
+									<span class="allpageTitleDetail">国内/入境游客统计</span>
+								</div>
+								<div class="allpageTitleRight">数据来源：公安局</div>
+							</div>
+							<div class="allPageContent">
+								<div class="entryPies">
+									<div class="imgBigBox">
+										<div class="imgBox">
+											
+											<p>国内</p>
+											<p class="fonts" id="china"></p>
+										
+										</div>
+										<div class="imgBox">
+											
+											<p>境外</p>
+											<p class="fonts" id="notChina"></p>
+										
+										</div>
+									</div>
+									<div id="entryPie"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="leftCenter">
+					<div class="top">
+						<div class="allPageWap">
+							<div class="allpageTitle">
+								<div class="allpageTitleLeft">
+									<span class="allpageTitleDot"></span>
+									<span class="allpageTitleDetail">景区游客住宿天数分析</span>
+								</div>
+								<div class="allpageTitleRight">数据来源：公安局</div>
+							</div>
+							<div class="allPageContent">
+								<div id="roomday"></div>
+							</div>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="allPageWap">
+							<div class="allpageTitle">
+								<div class="allpageTitleLeft">
+									<span class="allpageTitleDot"></span>
+									<span class="allpageTitleDetail">国内/入境游客统计分析</span>
+								</div>
+								<div class="allpageTitleRight">数据来源：公安局</div>
+							</div>
+							<div class="allPageContent">
+								<div id="entryTourists"></div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="leftCenter3">
+					<div class="top">
+						<div class="allPageWap">
+							<!--                            <input type="text" id="yearInput" value="" onclick="changeYear('yearInput')"/>
+														<select name="" id="selectMonth" onchange="changeTime('yearInput','selectMonth')">
+															<option value="0">1月</option>
+															<option value="1">2月</option>
+															<option value="2">3月</option>
+															<option value="3">4月</option>
+															<option value="4">5月</option>
+															<option value="5">6月</option>
+															<option value="6">7月</option>
+															<option value="7">8月</option>
+															<option value="8">9月</option>
+															<option value="9">10月</option>
+															<option value="10">11月</option>
+															<option value="11">12月</option>
+														</select>-->
+							
+							<div class="allPageContent">
+								<div class="boxMap">
+									<ul class="images">
+										<li>今日住宿量</li>
+										<li class="fonts" id="dayCount">0</li>
+									</ul>
+									<ul class="images">
+										<li>本月住宿量</li>
+										<li class="fonts" id="mouthCount">0</li>
+									</ul>
+									<ul class="images">
+										<li>本年住宿量</li>
+										<li class="fonts" id="yearCount">0</li>
+									</ul>
+								</div>
+								<div class="mapWap">
+									<div class="date">
+										<form name="reg_testdate">
+											<select name="YYYY" id="yearId" onchange="changeYear('yearId')">
+												<option value="">请选择 年</option>
+											</select>
+											<select name="MM" id="monthId" onchange="changeTime('yearId','monthId')">
+												<option value="">选择 月</option>
+											</select>
+										</form>
+									</div>
+									<div id="lijiangmap"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="rightCenter">
+					<div class="top">
+						<div class="allPageWap">
+							<div class="allpageTitle">
+								<div class="allpageTitleRightCenter">
+									<span class="allpageTitleDot"></span>
+									<span class="allpageTitleDetail">酒店住宿人数TOP10</span>
+								</div>
+								<div class="allpageTitleRightCenter">数据来源：运营商</div>
+							</div>
+							<div class="allPageContent">
+								<div class="numberbox">
+									<div id="footerones"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="right">
+					<div class="top">
+						<div class="allPageWap">
+							<div class="allpageTitle">
+								<div class="allpageTitleRight">
+									<span class="allpageTitleDot"></span>
+									<span class="allpageTitleDetail">酒店舆情量TOP10</span>
+								</div>
+								<div class="date">
+									<form name="reg_testdate_day">
+										<select name="YYYY" id="selectYear">
+											<option value="">请选择 年</option>
+										</select>
+										<select name="MM" id="selectMonth">
+											<option value="">选择 月</option>
+										</select>
+										<select name="DD" id="selectDay" onchange="changeDay('selectYear','selectMonth','selectDay')">
+											<option value="">选择 日</option>
+										</select>
+									</form>
+								</div>
+							</div>
+							<div class="allPageContent">
+								<div class="Title">
+									<div class="PageTitle">
+										<span class="rank">排行</span>
+										<span class="tit">新闻标题</span>
+										<span class="sum">转发量</span>
+									</div>
+								</div>
+								<div class="numberBox">
+									<div class="number" id="number">
+
+									</div>
+									<div class="texts" id="content">
+
+									</div>
+									<div class="zhuanfaliang" id="count">
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<ul class="footer">
+			<li>
+				<div class="liWaps">
+					<div class="tittle">
+						<div class="tittleLeft">
+							<span class="dot"></span>
+							<span class="from">亚洲游客分析</span>
+						</div>
+						<div class="tittleRight">
+							数据来源：公安局
+						</div>
+					</div>
+					<div class="footerConentList">
+						<div id="AsiaTourists"></div>
+						<div id="progressfoot"></div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="liWaps">
+					<div class="tittle">
+						<div class="tittleLeft">
+							<span class="dot"></span>
+							<span class="from">美洲游客分布</span>
+						</div>
+						<div class="tittleRight">
+							数据来源：旅发委
+						</div>
+					</div>
+					<div class="footerConentList">
+						<div id="AmericasTourists"></div>
+						<div id="progresstwo"></div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="liWaps">
+					<div class="tittle">
+						<div class="tittleLeft">
+							<span class="dot"></span>
+							<span class="from">大洋洲游客分布</span>
+						</div>
+						<div class="tittleRight">
+							数据来源：旅发委
+						</div>
+					</div>
+					<div class="footerConentList">
+						<div id="oceaniaTourists"></div>
+						<div id="progressthree"></div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="liWaps">
+					<div class="tittle">
+						<div class="tittleLeft">
+							<span class="dot"></span>
+							<span class="from">欧洲游客分布</span>
+						</div>
+						<div class="tittleRight">
+							数据来源：旅发委
+						</div>
+					</div>
+					<div class="footerConentList">
+						<div id="europeanTourists"></div>
+						<div id="progressfour"></div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="liWaps">
+					<div class="tittle">
+						<div class="tittleLeft">
+							<span class="dot"></span>
+							<span class="from">非洲游客分布</span>
+						</div>
+						<div class="tittleRight">
+							数据来源：旅发委
+						</div>
+					</div>
+					<div class="footerConentList">
+						<div id="africaTourists"></div>
+						<div id="progressfive"></div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="liWaps">
+					<div class="tittle">
+						<div class="tittleLeft">
+							<span class="dot"></span>
+							<span class="from">国内游客分布</span>
+						</div>
+						<div class="tittleRight">
+							数据来源：旅发委
+						</div>
+					</div>
+					<div class="footerConentList">
+						<div id="chinaTourists"></div>
+						<div id="progresssix"></div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+</body>
+<script src="../js/url.js"></script>
+<script src="js/linkageParameters.js"></script>
+<script src="../js/map.js"></script>
+<script src="js/roomStatistical.js"></script>
+<script src="js/roomdays.js"></script>
+<script src="js/entryTourists.js"></script>
+<script src="js/entryPie.js"></script>
+<script src="js/asiatourists/asiatourists.js"></script>
+<script src="js/asiatourists/progress.js"></script>
+<script src="js/americas/americas.js"></script>
+<script src="js/oceania/oceania.js"></script>
+<script src="js/european/european.js"></script>
+<script src="js/africa/Africa.js"></script>
+<script src="../js/china.js"></script>
+<script src="js/china/china.js"></script>
+<script src="js/footOne.js"></script>
+<script src="js/americas/progress2.js"></script>
+<script src="js/oceania/progress3.js"></script>
+<script src="js/european/progress4.js"></script>
+<script src="js/africa/progress5.js"></script>
+<script src="js/china/progresssix.js"></script>
+<script src="js/lijiangMap.js"></script>
+<script src="../js/nav.js"></script>
+<script src="js/stay.js"></script>
+<script src="js/hotelPublicOpinion.js"></script>
+</html>

@@ -1,0 +1,316 @@
+.baseDataAnalysis{
+    width:100%;
+    height: 100%;
+    background: url("../image/scenicDetails/bg.jpg") no-repeat;
+    background-size: 100% 100%;
+
+}
+.baseDataAnalysis .content .contents .wapList{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.baseDataAnalysis .contents .wapList .left{
+    flex: 1;
+    height: 100%;
+}
+.baseDataAnalysis .contents .wapList .left .top{
+    width: 100%;
+    height: 48%;
+}
+.contents .wapList .left .top .allPageContent .date{
+    width:100%;
+    height: 12%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px !important;
+    font-weight: bolder;
+    color: #6394fa;
+}
+.contents .wapList .left .top .allPageContent .weather{
+     width:100%;
+     height: 35%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+.contents .wapList .left .top .allPageContent .weather img{
+    height: 65%;
+    width: 12%;
+}
+
+.contents .wapList .left .top .allPageContent .weatherSituation{
+    width:100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px !important;
+    font-weight: bolder;
+    color: #6394fa;
+}
+.contents .wapList .left .top .allPageContent .weatherDetail{
+    width:100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px !important;
+    font-weight: bolder;
+    color: #6394fa;
+}
+.contents .wapList .left .top .allPageContent .arrSituation{
+    width:100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    color: #6394fa;
+    margin-top: 0.8%;
+}
+.contents .wapList .left .top .allPageContent .arrSituation .tit{
+    font-size: 18px !important;
+}
+.contents .wapList .left .top .allPageContent .arrSituation .stuaution{
+    font-size: 20px !important;
+    background:#09ca04 ;
+    padding: 1px 20px 1px 20px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.baseDataAnalysis .contents .wapList .left .bottom{
+    width: 100%;
+    height: 48%;
+    margin-top: 4%;
+}
+
+.baseDataAnalysis .contents .wapList .leftCenter{
+    flex: 2;
+    height: 100%;
+}
+.baseDataAnalysis .contents .wapList .leftCenter .ups{
+    width: 100%;
+    height: 48%;
+}
+.baseDataAnalysis .contents .wapList .leftCenter .downs{
+    width: 100%;
+    height: 48%;
+    margin-top: 2%;
+}
+.baseDataAnalysis .contents .wapList .rightCenter{
+    flex: 1;
+    height: 100%;
+}
+#parkRank{
+    width: 100%;
+    height: 100%;
+}
+
+
+.baseDataAnalysis .contents .wapList .right{
+    flex: 1;
+    height: 100%;
+}
+
+.contents .wapList .right .tittles{
+    width: 98%;
+    margin-left: 1%;
+    height: 6%;
+    background:#b3c1d9 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.6%;
+}
+.wapList .right .tittles .news,.wapList .right .tittles .from,.wapList .right .tittles .time{
+    flex: 17;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px !important;
+    font-weight: bolder;
+    color: #6c7484;
+    word-break: keep-all;
+    white-space: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+.contents .wapList .right .content{
+    width: 98%;
+    margin-left: 1%;
+    height: 93%;
+}
+.contents .wapList .right .content .wap{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contents .wapList .right .content .wap:nth-child(1){
+    background: #e7effd;
+}
+.wapList .right .content .news,.wapList .right .content .from,.wapList .right .content .time{
+    flex: 17;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px !important;
+    color: #32353e;
+}
+
+.baseDataAnalysis .contents .wapList .adds{
+    flex: 1;
+    height: 100%;
+}
+
+.contents .wapList .adds .tittles{
+    width: 98%;
+    margin-left: 1%;
+    height: 6%;
+    background:#b3c1d9 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.6%;
+}
+.wapList .adds .tittles .news,.wapList .adds .tittles .from,.wapList .adds .tittles .time{
+    flex: 17;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px !important;
+    font-weight: bolder;
+    color: #6c7484;
+}
+
+.contents .wapList .adds .content{
+    width: 98%;
+    margin-left: 1%;
+    height: 93%;
+}
+.contents .wapList .adds .content .wap{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contents .wapList .adds .content .wap:nth-child(1){
+    background: #e7effd;
+}
+.wapList .adds .content .news,.wapList .adds .content .from,.wapList .adds .content .time{
+    flex: 17;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px !important;
+    color: #32353e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#scenicComfortable{
+    width: 60%;
+    height: 100%;
+
+}
+#sumTirvaler,#compares{
+    width: 100%;
+    height: 100%;
+}
+.footerConentList .videos{
+    width: 100%;
+    height: 100%;
+    background: url("../image/vider.png") no-repeat;
+    background-size: 100% 100% ;
+}
+
+
+.scenicComfortable{
+    width: 40%;
+    height: 100%;
+}
+.scenicComfortable li{
+    width: 100%;
+    height: 30%;
+}
+.scenicComfortable li:nth-child(1){
+    margin-top: 20%;
+}
+.scenicComfortable li .tittles{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px !important;
+    color: #70a2fe;
+    font-weight: 300;
+}
+.scenicComfortable li .rates{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px !important;
+    color: #09ca04;
+}
+.allPageWap{
+    width: 97% ;
+    height: 100% !important;
+    margin-top: 0 !important;
+}
+
+.contents .wapList .rightCenter .allPageWap{
+    border-top: 2px solid #35539e !important;
+    border-bottom: 2px solid #35539e !important;
+    border-left: 1px solid #35539e !important;
+    border-right: 1px solid #35539e !important;
+}

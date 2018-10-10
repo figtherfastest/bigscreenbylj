@@ -1,0 +1,731 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+
+}
+
+.baseDataAnalysis {
+    width: 100%;
+    height: 100%;
+    background: url("../publicStyle/image/baseDataAnalysis/index/index.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.header {
+    width: 99%;
+    margin-left: 0.5%;
+    height: 11.5%;
+    display: flex;
+    align-items: center;
+}
+
+.headerWap {
+    width: 88%;
+    margin-left: 6%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.headerWap .headerLeft {
+    width: 24.2%;
+    height: 100%;
+    margin-left: 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerWap .headerLeft .index {
+    flex: 1;
+    height: 30px;
+    background: url("../publicStyle/image/index.png");
+    background-size: 100% 100%;
+
+}
+
+.headerWap .headerLeft .basicData {
+    flex: 1;
+    height: 30px;
+    margin-left: 3%;
+    height: 30px;
+    background: url("../publicStyle/image/basicData.png");
+    background-size: 100% 100%;
+
+}
+
+.headerWap .headerLeft .secentAnalysis {
+    flex: 1;
+    height: 30px;
+    margin-left: 3%;
+    height: 30px;
+    background: url("../publicStyle/image/secenyAnalysis.png");
+    background-size: 100% 100%;
+
+}
+
+.headerWap .headerLeft .roomAnalysis {
+    flex: 1;
+    height: 30px;
+    margin-left: 3%;
+    height: 30px;
+    background: url("../publicStyle/image/hotelAnalysis.png");
+    background-size: 100% 100%;
+
+}
+
+.headerWap .headerCenter {
+    width: 39.8%;
+    height: 100%;
+}
+
+.headerWap .headerRight {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerWap .headerRight .holidayAnalysis {
+    flex: 1;
+    height: 30px;
+    height: 30px;
+    background: url("../publicStyle/image/hilidayAnalisis.png");
+    background-size: 100% 100%;
+}
+
+.headerWap .headerRight .tirvalFace {
+    flex: 1;
+    height: 30px;
+    margin-left: 3%;
+    height: 30px;
+    background: url("../publicStyle/image/tirvalorProrait.png");
+    background-size: 100% 100%;
+
+}
+
+.headerWap .headerRight .teamWatch {
+    flex: 1;
+    height: 30px;
+    margin-left: 3%;
+    height: 30px;
+    background: url("../publicStyle/image/teamWatch.png");
+    background-size: 100% 100%;
+
+}
+
+.headerWap .headerRight .seceryWatch {
+    flex: 1;
+    height: 30px;
+    margin-left: 3%;
+    height: 30px;
+    background: url("../publicStyle/image/operateWatch.png");
+    background-size: 100% 100%;
+
+}
+
+.content {
+    width: 99%;
+    height: 87.5%;
+    margin-left: 0.5%;
+    background-color: #fff;
+}
+
+.contents {
+    width: 100%;
+    height: 66%;
+}
+
+.baseDataAnalysis .content .contents .wapList {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*客源地分析排行*/
+.baseDataAnalysis .contents .wapList .left {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.left .allpageTitle {
+    width: 100%;
+    height: 5% !important;
+}
+
+.baseDataAnalysis .contents .wapList .left .top {
+    width: 100%;
+    height: 101.5%;
+
+}
+
+.allPageWap {
+    width: 99%;
+    height: 98%;
+    margin-top: 1%;
+    border-top: 2px solid #35539e;
+    border-bottom: 2px solid #35539e;
+    border-left: 1px solid #35539e;
+    border-right: 1px solid #35539e;
+
+}
+
+.allpageTitle {
+    width: 100%;
+    height: 8%;
+    display: flex;
+    justify-content: space-between;
+    background: #e9effd;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.allpageTitle .allpageTitleLeft {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.allpageTitle .allpageTitleLeft .allpageTitleDot {
+    width: 4px;
+    height: 15px;
+    background: #2c63da;
+    margin-left: 6px;
+}
+
+.allpageTitle .allpageTitleLeft .allpageTitleDetail {
+    font-size: 15px !important;
+    color: #6394fa;
+    margin-left: 5px;
+    font-weight: bolder;
+}
+
+.allpageTitle .allpageTitleRight {
+    color: #6394FA;
+    font-size: 15px !important;
+    margin-right: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.allPageContent .progress {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.allPageContent .progress #customerTop {
+    width: 100%;
+    height: 125%;
+    margin-top: -12%;
+    margin-left: -20px;
+}
+
+/*各省游客消费排行*/
+.baseDataAnalysis .contents .wapList .leftCenter {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.leftCenter .allpageTitle {
+    width: 100%;
+    height: 5% !important;
+}
+
+.baseDataAnalysis .contents .wapList .leftCenter .top {
+    width: 100%;
+    height: 101.5%;
+}
+
+.baseDataAnalysis .contents .wapList .leftCenter .allPageContent #indexPie {
+    width: 100%;
+    height: 50%;
+}
+
+#indexBar {
+    width: 100%;
+    height: 50%;
+}
+
+/*中间地图*/
+.baseDataAnalysis .contents .wapList .leftCenter3 {
+    flex: 2;
+    height: 100%;
+    margin-top: -0.3%;
+    width: 100%;
+}
+
+.allPageContent .maps {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.allPageContent .maps .image img {
+    display: flex;
+    flex-direction: column;
+}
+
+.allPageContent .maps .imgs {
+    position: relative;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.allPageContent .maps .image .title {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-left: 5%;
+    padding-top: 3%;
+    color: #fff;
+}
+
+.allPageContent .maps .image .title p:nth-child(n+3) {
+    margin-left: 5%;
+}
+
+.allPageContent .maps .image .titles p:nth-child(3) {
+    margin-left: 5%;
+}
+
+.allPageContent .maps .image .titles p:nth-child(4) {
+    margin-left: 5%;
+}
+
+.allPageContent .maps .image .imgs .titles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-left: 55%;
+    padding-top: 3%;
+    color: #fff;
+}
+
+.allPageContent .maps .image .img2 {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10%;
+}
+
+.allPageContent .maps .image .img2 .title2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.allPageContent .maps .image .img2 .title2 p:last-child {
+    color: #02F4F0;
+    font-family: "Digital-7 Mono";
+    font-size: 30px;
+}
+
+.allPageContent .bottomImg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -20px;
+}
+
+.allPageContent .bottomImg .img3 {
+    background: url("../publicStyle/image/baseDataAnalysis/index/img_4.png") no-repeat;
+    width: 100%;
+    height: 25%;
+}
+
+.allPageContent .bottomImg .img3 li {
+    color: #fff;
+    text-align: center;
+    margin-top: 8%;
+}
+
+.allPageContent .bottomImg .img3 li:last-child {
+    color: #02F4F0;
+    font-family: "Digital-7 Mono";
+    font-size: 25px;
+    text-align: center;
+
+}
+
+/*.allPageContent .bottomImg .img3 li:nth-child(3) {*/
+/*opacity: 0.5;*/
+/*z-index: 5;*/
+/*}*/
+
+.allPageContent .maps .image {
+    padding: 1%;
+}
+
+.allPageContent .maps .image img:nth-child(2) {
+    padding-top: 4%;
+}
+
+.allPageContent #lijiangmap {
+    width: 60%;
+    height: 90%;
+}
+
+.allPageContent .images {
+    width: 99%;
+    margin-left: 0.5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.allPageContent .images img {
+    width: 20%;
+}
+
+.baseDataAnalysis .contents .wapList .leftCenter3 .top {
+    width: 100.5%;
+    height: 101.5%;
+}
+
+/*热门景区客流量排行top10*/
+.baseDataAnalysis .contents .wapList .rightCenter {
+    flex: 1;
+    height: 100%;
+}
+
+.rightCenter .allpageTitle {
+    width: 100%;
+    height: 5% !important;
+}
+
+.baseDataAnalysis .contents .wapList .rightCenter .top {
+    width: 100%;
+    height: 101.5%;
+
+}
+
+.allPageWap {
+    width: 99%;
+    height: 98%;
+    margin-top: 1%;
+    border-top: 2px solid #35539e;
+    border-bottom: 2px solid #35539e;
+    border-left: 1px solid #35539e;
+    border-right: 1px solid #35539e;
+
+}
+
+.allpageTitle {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    background: #e9effd;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.allpageTitle .allpageTitleRightCenter .allpageTitleDot {
+    width: 4px;
+    height: 15px;
+    background: #2c63da;
+    margin-left: 6px;
+}
+
+.allpageTitle .allpageTitleRightCenter .allpageTitleDetail {
+    font-size: 15px !important;
+    color: #6394fa;
+    margin-left: 5px;
+    font-weight: bolder;
+}
+
+.allpageTitle .allpageTitleRightCenter {
+    color: #6394FA;
+    font-size: 14px !important;
+    margin-right: 3px;
+    display: flex;
+    align-items: center;
+}
+
+/*景区客流量排行*/
+.rightCenter .allPageContent .progress {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rightCenter .allPageContent .progress #trafficRanking {
+    width: 100%;
+    height: 125%;
+    margin-top: -12%;
+}
+
+.allPageContent .progress .number {
+    width: 20%;
+    height: 100%;
+    margin-left: 1%;
+    margin-top: 2%;
+}
+
+.allPageContent .progress .number div {
+    border: 1px solid;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    border-radius: 5px;
+    margin-top: 3px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+.allPageContent .progress .number div:nth-child(1) {
+    background-color: #ffc316;
+}
+
+.allPageContent .progress .number div:nth-child(2) {
+    background-color: #06fba9;
+}
+
+.allPageContent .progress .number div:nth-child(3) {
+    background-color: #128aff;
+}
+
+.allPageContent .progress .number div:nth-child(n+4) {
+    background-color: #0ecdf8;
+}
+
+/*中间图片高度*/
+.allPageContent {
+    width: 100%;
+    height: 92%;
+}
+
+/*最右边的舆情排行*/
+.baseDataAnalysis .contents .wapList .right {
+    flex: 1;
+    height: 100%;
+}
+
+.right .allpageTitle {
+    width: 100%;
+    height: 5% !important;
+}
+
+.baseDataAnalysis .contents .wapList .right .top {
+    width: 100%;
+    height: 101.5%;
+}
+
+.allPageWap {
+    width: 99%;
+    height: 98%;
+    margin-top: 1%;
+    border-top: 2px solid #35539e;
+    border-bottom: 2px solid #35539e;
+    border-left: 1px solid #35539e;
+    border-right: 1px solid #35539e;
+
+}
+
+.allpageTitle .allpageTitleRight .allpageTitleDot {
+    width: 4px;
+    height: 15px;
+    background: #2c63da;
+    margin-left: 6px;
+}
+
+.allpageTitle .allpageTitleRight .allpageTitleDetail {
+    font-size: 15px !important;
+    color: #6394fa;
+    margin-left: 5px;
+    font-weight: bolder;
+}
+
+.allpageTitle .allpageTitleRight {
+    color: #6394FA;
+    font-size: 14px !important;
+    margin-right: 3px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.right .allPageContent .headertitle {
+    width: 100%;
+    height: 30px;
+    background-color: #b3c1d9;
+    display: flex;
+    justify-content: space-between;
+    line-height: 30px;
+    margin-top: 2%;
+}
+
+.right .allPageContent .headertitle .titles {
+    width: 95%;
+    height: 100%;
+    margin-left: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right .numberBox {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.allPageContent .numberBox .number {
+    width: 20%;
+    height: 100%;
+}
+
+.allPageContent .numberBox .number div {
+    border: 1px solid;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    border-radius: 5px;
+    margin-top: 1px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+.allPageContent .numberBox .number div:nth-child(1) {
+    background-color: #ffc316;
+}
+
+.allPageContent .numberBox .number div:nth-child(2) {
+    background-color: #06fba9;
+}
+
+.allPageContent .numberBox .number div:nth-child(3) {
+    background-color: #128aff;
+}
+
+.allPageContent .number div:nth-child(n+4) {
+    background-color: #0ecdf8;
+}
+
+/*新闻标题*/
+.allPageContent .texts {
+    width: 60%;
+    height: 100%;
+}
+
+.texts div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 6px;
+}
+
+.allPageContent .zhuanfaliang {
+    width: 20%;
+    height: 100%;
+    padding: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.allPageContent .zhuanfaliang div {
+    padding: 4px;
+}
+
+/*底部摄像头*/
+.footer {
+    /*width: 100%;*/
+    /*height: 33%;*/
+    margin-top: 0.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer li {
+    flex: 1;
+    height: 100%;
+}
+
+.footer li .liWaps {
+    width: 99%;
+    margin-left: 3%;
+    height: 98%;
+    margin-top: 1%;
+    border-top: 2px solid #35549f;
+    border-bottom: 2px solid #35549f;
+    border-left: 1px solid #35549f;
+    border-right: 1px solid #35549f;
+}
+
+.footer li .liWaps:nth-child(1) {
+    margin-left: 0;
+}
+
+.footer li .liWaps .tittle {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    background: #e9effd;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.footer li .liWaps .tittle .tittleLeft {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer li .liWaps .tittle .tittleLeft .dot {
+    width: 4px;
+    height: 15px;
+    background: #2c63da;
+    margin-left: 6px;
+
+}
+
+.footer li .liWaps .tittle .tittleLeft .from {
+    font-size: 15px !important;
+    color: #6394fa;
+    margin-left: 5px;
+    font-weight: bolder;
+}
+
+.footer li .liWaps .tittle .tittleRight {
+    color: #6394FA;
+    font-size: 14px !important;
+    margin-right: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.footer li .liWaps .footerConentList {
+    width: 100%;
+    height: 92%;
+}
+
+
