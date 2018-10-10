@@ -723,10 +723,13 @@ var entry = {
         var myChart = echarts.init(document.getElementById('ageAnalysis'));
         var datas = ageValue;
         var dataList = []
+        var sum = 0
         ageValue.forEach(item => {
-            dataList.push(item / 10000)
+            sum+=(item / 10000)
         })
-        console.log(dataList);
+        ageValue.forEach(item => {
+            dataList.push((item / 100)/sum)
+        })
         var myColor = ['#0ecdf8', '#0ecdf8', '#128aff', '#06fba9', '#ffc316'];
         var max = Math.max.apply(null, dataList) / 0.85;
         var maxList = []
@@ -797,7 +800,7 @@ var entry = {
                             position: 'left',
                             offset: [300, -10],
                             color: '#000',
-                            formatter: '{c}/万人'
+                             formatter: '{c}%'
                         }
                     },
                     itemStyle: {
