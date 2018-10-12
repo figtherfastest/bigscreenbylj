@@ -56,37 +56,31 @@ var index = {
         console.log(keys);
         var myChart = echarts.init(document.getElementById('indexPie'));
         option = {
-            title: {
-                text: '',
-                subtext: '',
-                link: ''
-            },
             tooltip: {
                 show: false
             },
             legend: {
-                itemGap: 1,
+                itemGap: 5,
                 orient: 'vertical',
-                // type: 'scroll',
-                icon: 'diamond',
+                icon: 'roundRect',
+                itemWidth:20,
+                itemHeight:10,
                 bottom: 40,
-                x: '',
+                x: '2',
                 y: '8',
                 textStyle: {
-                    fontSize: 15,
+                    fontSize: 13,
+                    fontWeight:'bold'
                 },
                 data: keys
             },
 
             series: [{
                 type: 'pie',
-                radius: ['35%', '60%'],
+                radius: ['20%', '60%'],
                 roseType: 'area',
                 center: ['63%', '50%'],
                 zlevel: 2,
-                // tooltip: {
-                //     formatter: '{b}: {d}%'
-                // },
                 labelLine: {
                     normal: {
                         length: 10
@@ -96,7 +90,8 @@ var index = {
                     normal: {
                         show: true,
                         color: '#000',
-                        fontSize: 15,
+                        fontSize: 13,
+                        fontWeight:'bold',
                         formatter: '{b}\n{d}%'
                     }
                 },

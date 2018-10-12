@@ -51,16 +51,20 @@ var progress4 = {
                 }
             }
         });
-        var max = Math.max.apply(null, datas) / 0.7;
+        var dataList = []
         var allMax = []
         var allDatas = []
-        for(var i=0;i<datas.length;i++){
-            allMax.push(max)
+        for (var i = 0; i < datas.length; i++) {
+            dataList.push(datas[i].value)
             allDatas.push(datas[i].value)
         }
+        var max = Math.max.apply(null, dataList) / 0.7;
+        allDatas.forEach(item => {
+            allMax.push(max)
+        })
         option = {
             grid: {
-                left: '-25%',
+                left: '-27%',
                 right: '2%',
                 bottom: '1%',
                 top: '10%',
@@ -98,10 +102,12 @@ var progress4 = {
                     },
                     axisLabel: {
                         show: true,
-                        margin: 0,
+                        margin: -4,
                         align: 'left',
                         verticalAlign: 'bottom',
-                        padding: [0, 0, 10, 0]
+                        padding: [0, 0, 6, 0],
+                        color: '#000',
+                        fontWeight: '300'
                     },
                     yAxisIndex: 1,
                 },
@@ -118,7 +124,7 @@ var progress4 = {
                         show: false,
                     },
                     axisLabel: {
-                        show: true,
+                        show: false,
                         margin: 0,
                         align: 'left',
                         verticalAlign: 'bottom',
@@ -135,10 +141,13 @@ var progress4 = {
                 z: 30,
                 label: {
                     normal: {
-                        show: false,
-                        position: 'center',
-                        offset: [500, 30],
-                        formatter: '{c}'
+                        show: true,
+                        position: 'left',
+                        offset: [200, -10],
+                        formatter: '{c}个',
+                        color: '#252830',
+                        fontSize: '12',
+                        fontWeight: 'bold',
                     }
                 },
                 itemStyle: {

@@ -5,62 +5,71 @@ var progress5 = {
     },
     progressfive: function () {
         var myChart = echarts.init(document.getElementById('progressfive'));
-        var datas =[];
-        var header =[];
+        var datas = [];
+        var header = [];
 
         var firstDay;
         var lastDay;
-        if(linkTime == null) {
+        if (linkTime == null) {
             var date = new Date();
             firstDay = new Date(date.getFullYear(), date.getMonth(), 1); //当月第一天
             // lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0); //当月最后一天
-            lastDay= getLastDay(date.getFullYear(),date.getMonth()+1);
+            lastDay = getLastDay(date.getFullYear(), date.getMonth() + 1);
         } else {
             firstDay = new Date(linkTime.getFullYear(), linkTime.getMonth(), 1); //当月第一天
             // lastDay = new Date(linkTime.getFullYear(), linkTime.getMonth() + 1, 1); //当月最后一天
-            lastDay= getLastDay(linkTime.getFullYear(),linkTime.getMonth()+1);
+            lastDay = getLastDay(linkTime.getFullYear(), linkTime.getMonth() + 1);
         }
         // var defaultAddressCode = 53470;
-        if(linkAddressCode != null) {
+        if (linkAddressCode != null) {
             defaultAddressCode = linkAddressCode;
         }
 
         $.ajax({
             type: "GET",
-            async:false,
-            url: zhushu_url+"livingStatistics/findByAreaAndTimeAndContinent",
-            data: {startTime:firstDay.getTime() , endTime: lastDay.getTime(),addressCode:defaultAddressCode,continentId:3},
+            async: false,
+            url: zhushu_url + "livingStatistics/findByAreaAndTimeAndContinent",
+            data: {
+                startTime: firstDay.getTime(),
+                endTime: lastDay.getTime(),
+                addressCode: defaultAddressCode,
+                continentId: 3
+            },
             dataType: "json",
             success: function (data) {
                 if (data.code == "OK") {
-                    if(datas.length != 0){
+                    if (datas.length != 0) {
                         datas = [];
                     }
-                    if(header.length != 0){
+                    if (header.length != 0) {
                         header = [];
                     }
                     // console.log(data.data)
                     $.each(data.data, function (index, item) {
                         datas.push({
                             value: item.num,
-                            itemStyle:{color: pillarColor[index]}
+                            itemStyle: {color: pillarColor[index]}
                         });
-                        header.push( item.cname );
+                        header.push(item.cname);
                     });
 
                 }
             }
         });
-        var max = Math.max.apply(null, datas) / 0.7;
+        var dataList = []
         var allMax = []
         var allDatas = []
-        for(var i=0;i<datas.length;i++){
-            allMax.push(max)
+        for (var i = 0; i < datas.length; i++) {
+            dataList.push(datas[i].value)
             allDatas.push(datas[i].value)
         }
+        var max = Math.max.apply(null, dataList) / 0.7;
+        allDatas.forEach(item => {
+            allMax.push(max)
+        })
         option = {
             grid: {
-                left: '-10%',
+                left: '-25%',
                 right: '2%',
                 bottom: '1%',
                 top: '5%',
@@ -98,15 +107,20 @@ var progress5 = {
                     },
                     axisLabel: {
                         show: true,
-                        margin: 0,
+                        margin: -4,
                         align: 'left',
                         verticalAlign: 'bottom',
-                        padding: [0, 0, 10, 0]
+                        padding: [0, 0, 6, 0],
+                        color: '#000',
+                        fontWeight: '300'
                     },
                     yAxisIndex: 1,
                 },
                 {
                     type: 'category',
+                    position: 'left',
+                    nameLocation: 'end',
+                    offset: 25,
                     data: allDatas.reverse(),  // 名称所对应的值
                     splitLine: {
                         show: false
@@ -118,11 +132,14 @@ var progress5 = {
                         show: false,
                     },
                     axisLabel: {
-                        show: true,
+                        show: false,
                         margin: 0,
                         align: 'left',
                         verticalAlign: 'bottom',
-                        padding: [0, 0, 10, -12]
+                        padding: [0, 0, 10, -12],
+                        fontWeight: '300',
+                        color: '#252830',
+                        fontSize: '12'
                     },
                     yAxisIndex: 1,
                 }
@@ -135,10 +152,13 @@ var progress5 = {
                 z: 30,
                 label: {
                     normal: {
-                        show: false,
-                        position: 'center',
-                        offset: [500, 30],
-                        formatter: '{c}'
+                        show: true,
+                        position: 'left',
+                        offset: [200, -10],
+                        formatter: '{c}个',
+                        color: '#252830',
+                        fontSize: '12',
+                        fontWeight: 'bold',
                     }
                 },
                 itemStyle: {

@@ -67,13 +67,22 @@ var rooms = {
                 {
                     name: '',
                     type: 'pie',
-                    radius: '80%',
-                    center: ['50%', '50%'],
+                    radius: '70%',
+                    center: ['50%', '52%'],
                     data: levels,
                     label: {
                         normal: {
                             position: 'outside',
                             formatter: "{b}\n{d}%"
+                        }
+                    },
+                    labelLine:{
+                        normal:{
+                            length:3,
+
+                        },
+                        lineStyle:{
+                            smooth:0.9
                         }
                     },
                     itemStyle: {

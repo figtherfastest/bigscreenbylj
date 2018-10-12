@@ -1,13 +1,13 @@
 var datesTime
 
 var homePagePublicOpinion = {
-    init:function () {
+    init: function () {
         var that = this
         that.publicOpinion()
     },
-    publicOpinion:function () {
+    publicOpinion: function () {
 
-        if(publicOpinionTime == null ){
+        if (publicOpinionTime == null) {
             var date = new Date();
             var year = date.getFullYear();
             var month = date.getMonth() + 1;
@@ -19,39 +19,38 @@ var homePagePublicOpinion = {
                 strDate = "0" + strDate;
             }
             datesTime = year + month + strDate;
-        }else{
+        } else {
             datesTime = publicOpinionTime
         }
         $.ajax({
-            url:homepage_public_opinion_url,
-            contentType:"application/json",
-            type:"GET",
-            async:false,
-            data:{
-                "daysTime":datesTime
+            url: homepage_public_opinion_url,
+            contentType: "application/json",
+            type: "GET",
+            async: false,
+            data: {
+                "daysTime": datesTime
             },
-            success:function(result) {
+            success: function (result) {
                 var array = result.data;
                 var str = "";
-                var number = "";
-                var count = "";
                 if (array.length > 0) {
                     $.each(array, function (i, n) {
                         var j = i + 1
                         var num = j
-                            number += '<div>' + num + '</div>';
-                            str += '<div title="'+n.title+'">' + n.title.slice(0,20) +'...'+ '</div>';
-                            count += '<div>' + n.viewCount + '</div>';
-
+                        str += '<div class="numberWap">' +
+                            '<div class="number" id="number">' + num + '</div>' +
+                            '<div class="tittle" title="' + n.title + '">' + n.title + '</div>' +
+                            '<div class="count">' + n.viewCount + '</div>' +
+                            '</div>'
                     });
-                    $("#number").html(number)
-                    $("#content").html(str)
-                    $("#count").html(count)
-                }else{
-                    $("#number").text("0")
-                    $("#content").text("暂无数据")
-                    $("#count").text("0")
+                } else {
+                    str += '<div class="numberWap">' +
+                        '<div class="number" id="number">0</div>' +
+                        '<div class="tittle">暂无数据</div>' +
+                        '<div class="count">0</div>' +
+                        '</div>'
                 }
+                $('.numberBox').html(str)
             }
         });
 

@@ -78,13 +78,22 @@ var hotelData = {
                 {
                     name: '',
                     type: 'pie',
-                    radius: '80%',
+                    radius: '90%',
                     center: ['50%', '50%'],
                     data: localAndForeign,
                     label: {
                         normal: {
                             position: 'outside',
                             formatter: "{b}:{c}\n{d}%"
+                        }
+                    },
+                    labelLine:{
+                        normal:{
+                            length:3,
+
+                        },
+                        lineStyle:{
+                            smooth:0.1
                         }
                     },
                     itemStyle: {

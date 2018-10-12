@@ -303,6 +303,8 @@ html, body {
 .allPageContentCenter .maps .image .imgs .title p,.allPageContentCenter .maps .image .imgs .titles p{
     width: 100%;
     height: 15%;
+    color: #FFFFFF;
+    font-size: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -312,6 +314,8 @@ html, body {
 }
 .allPageContentCenter .maps .image .imgs .title p:nth-child(1),.allPageContentCenter .maps .image .imgs .titles p:nth-child(1){
     margin-top: 6%;
+    color: #FFFFFF;
+    font-size: 14px;
 }
 
 
@@ -328,7 +332,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 21px;
+    font-size: 18px;
     color: white;
 }
 .allPageContentCenter .image .img2 .fonts{
@@ -336,7 +340,7 @@ html, body {
     height: 50%;
     display: flex;
     justify-content: center;
-    font-size: 32px;
+    font-size: 40px;
     font-family: "Digital-7 Mono";
     color: RGBA(2, 244, 240, 1);
 }
@@ -377,6 +381,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 15px;
 }
 .top .allPageWap .bottomImg .img3 li:nth-child(2){
     width: 100%;
@@ -618,13 +623,16 @@ html, body {
 }
 .right .numberBox {
     width: 100%;
+    height: 92%;
+}
+.right .numberBox .numberWap{
+    width: 100%;
     height: 35px;
     display: flex;
-    justify-content: flex-start;
+    justify-content:flex-start;
     align-items: center;
 }
-
-.allPageContent .numberBox .number {
+.right .numberBox .numberWap .number{
     width: 30px;
     height: 30px;
     -webkit-border-radius: 3px;
@@ -639,22 +647,33 @@ html, body {
     font-weight: bold;
 }
 
-.allPageContent .numberBox .number:nth-child(1) {
+
+.right .numberBox .numberWap .number:nth-child(1) {
     background-color: #ffc316;
 }
 
-.allPageContent .numberBox .number:nth-child(2) {
+.right .numberBox .numberWap .number:nth-child(2) {
     background-color: #06fba9;
 }
 
-.allPageContent .numberBox .number:nth-child(3) {
+.right .numberBox .numberWap .number:nth-child(3) {
     background-color: #128aff;
 }
-
-.allPageContent .number:nth-child(n+4) {
-    background-color: #0ecdf8;
+.right .numberBox .numberWap .tittle{
+    flex: 7;
+    padding-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    color: #252830;
+    font-weight: bold;
 }
-
+.right .numberBox .numberWap .count{
+    flex: 1;
+    font-size: 13px;
+    text-align: center;
+}
 /*新闻标题*/
 .allPageContent .texts {
     flex: 6;

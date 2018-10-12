@@ -15,11 +15,11 @@ var china = {
             var date = new Date();
             firstDay = new Date(date.getFullYear(), date.getMonth(), 1); //当月第一天
             // lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0); //当月最后一天
-            lastDay= getLastDay(date.getFullYear(),date.getMonth()+1);
+            lastDay = getLastDay(date.getFullYear(), date.getMonth() + 1);
         } else {
             firstDay = new Date(linkTime.getFullYear(), linkTime.getMonth(), 1); //当月第一天
             // lastDay = new Date(linkTime.getFullYear(), linkTime.getMonth() + 1, 1); //当月最后一天
-            lastDay= getLastDay(linkTime.getFullYear(),linkTime.getMonth()+1);
+            lastDay = getLastDay(linkTime.getFullYear(), linkTime.getMonth() + 1);
         }
         // var defaultAddressCode = 53470;
         if (linkAddressCode != null) {
@@ -83,9 +83,9 @@ var china = {
                     orient: 'horizontal',
                     bottom: "3%",
                     x: "center",
-                    itemWidth:18,
-                    itemHeight:10,
-                    itemGap:5,
+                    itemWidth: 18,
+                    itemHeight: 10,
+                    itemGap: 5,
                     data: header,
                 }
             ],
@@ -94,7 +94,7 @@ var china = {
                     name: '',
                     type: 'pie',
                     radius: ['50%', '70%'],
-                    center: ['50%', '37%'],
+                    center: ['50%', '33.9%'],
                     avoidLabelOverlap: false,
                     hoverAnimation: false,//是否开启hover在扇形区域上放大动画效果
                     slient: true,//图形是否不响应和触发鼠标事件，默认为false，即响应和触发鼠标事件
@@ -102,17 +102,13 @@ var china = {
                         normal: {
                             show: false,
                             position: 'center',
-                            fontSize: '14',
-                            fontWeight: 'bold',
-                            // formatter: '{b}\n{c}人'
+                            fontSize: '12',
                             formatter: "{a}\n{b}\n {c}人 \n{d}%",
                         },
                         emphasis: {
                             show: true,
                             textStyle: {
-                                fontSize: '14',
-                                fontWeight: 'bold',
-                                // color: ['#252830', '#fc7600', '#4B7EFE'],
+                                fontSize: '12',
                                 color: '#252830'
                             }
                         }

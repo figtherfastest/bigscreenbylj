@@ -40,7 +40,7 @@ var bars = {
             title: {
                 text: '',
                 subtext: '单位:万元',
-                y: -5,
+                y: -10,
                 subtextStyle: {
                     color: '#000'
                 }
@@ -64,10 +64,19 @@ var bars = {
                     data: keys,
                     axisLabel: {
                         interval: 0,
-                        rotate: 40
+                        rotate: 40,
+                        textStyle: {
+                            color:'#252830',
+                        }
                     },
                     axisTick: {       //x轴刻度线
                         "show": false
+                    },
+                    splitLine: {
+                        show: false
+                    },
+                    axisLine: {
+                        show: false
                     },
                 }
             ],
@@ -77,7 +86,12 @@ var bars = {
                     axisLabel: {
                         show: true,
                         interval: 'auto',
-                        // formatter: '{value}.00%'
+                        textStyle: {
+                            color:'#252830',
+                        }
+                    },
+                    axisLine: {
+                        show: false
                     },
                     show: true,
                     axisTick: {       //y轴刻度线
@@ -89,20 +103,15 @@ var bars = {
                 {
                     name: '',
                     type: 'bar',
-                    barWidth: '50%',
+                    barWidth: '35%',
                     color: '#4b7efe',
                     itemStyle: {
-                        // emphasis: {
-                        //     barBorderRadius: 30
-                        // },
                         normal: {
                             barBorderRadius: [5, 5, 0, 0],
 
                             label: {
                                 normal: {
                                     show: false,
-                                    //formatter: '{c}%',
-                                    // position: 'top',
                                 }
                             },
                         }

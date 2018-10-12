@@ -57,7 +57,7 @@ var customer = {
         option = {
             grid: {
                 left: '-10%',
-                right: '5%',
+                right: '3%',
                 bottom: '-1%',
                 top: '1%',
                 containLabel: true
@@ -96,7 +96,9 @@ var customer = {
                         margin: -4,
                         align: 'left',
                         verticalAlign: 'bottom',
-                        padding: [0, 0, 10, 0]
+                        padding: [0, 0, 6, 0],
+                        color:'#000',
+                        fontWeight:'bold'
                     }
 
                 },
@@ -226,8 +228,9 @@ var customer = {
                         normal: {
                             show: true,
                             position: 'left',
-                            offset: [300, -10],
-                            color: '#000',
+                            offset: [320, -10],
+                            color:'#000',
+                            fontWeight:'bold',
                             formatter: '{c}/万人'
                         }
                     },

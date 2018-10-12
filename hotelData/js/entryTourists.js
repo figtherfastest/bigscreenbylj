@@ -13,12 +13,9 @@ var entrys = {
         if(linkTime == null) {
             var date = new Date();
             linkYear = date.getFullYear();
-            /*firstDay = new Date(date.getFullYear(), 0, 1); //当月第一天
-            lastDay = new Date(date.getFullYear()+1, 0, 1); //当月最后一天*/
+
         } else {
             linkYear = linkTime.getFullYear();
-            /*firstDay = new Date(linkTime.getFullYear(), 0, 1); //当月第一天
-            lastDay = new Date(linkTime.getFullYear()+1, 0, 1); //当月最后一天*/
         }
         // var defaultAddressCode = 53470;
         if(linkAddressCode != null) {
@@ -67,7 +64,7 @@ var entrys = {
             },
             legend: {
                 data: ['国内', '国外'],
-                x:140,
+                x:100,
                 y:10,
                 itemHeight:10
             },
@@ -75,21 +72,33 @@ var entrys = {
                 left: '3%',
                 right: '4%',
                 bottom: '3%',
+                top:'20%',
                 containLabel: true
             },
             xAxis: {
                 type: 'category',
                 boundaryGap: [0, 0.01],
                 data: header,
-                axisTick:{       //x轴刻度线
-                    "show":false
+                axisTick: {       //x轴刻度线
+                    "show": false
                 },
+                axisLine:{
+                    'show':false
+                }
             },
             yAxis: {
                 type: 'value',
-                axisTick:{       //Y轴刻度线
-                    "show":false
+                axisTick: {       //Y轴刻度线
+                    "show": false
                 },
+                axisLine:{
+                    'show':false
+                },
+                splitLine:{
+                    lineStyle:{
+                        color:'#efefef'
+                    }
+                }
             },
             series: [
                 {
@@ -99,8 +108,7 @@ var entrys = {
                     itemStyle:{
                         normal: {
                             color:'#36d9fc',
-                            //柱形图圆角，初始化效果
-                            barBorderRadius:[6, 0, 0, 0],
+                            barBorderRadius:[6, 6, 0, 0],
                         }
                     },
                     data: dataDomestics
@@ -113,7 +121,7 @@ var entrys = {
                         normal: {
                             color:'#487efe',
                             //柱形图圆角，初始化效果
-                            barBorderRadius:[6, 0, 0, 0],
+                            barBorderRadius:[6, 6, 0, 0],
                         }
                     },
                     data: dataAbroads

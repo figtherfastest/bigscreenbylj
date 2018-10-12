@@ -10,11 +10,11 @@ var trafficrank = {
         var year;
         var month;
         if (linkTime == null) {
-            month = new Date().getMonth()+1;
-            year=new Date().getFullYear()
+            month = new Date().getMonth() + 1;
+            year = new Date().getFullYear()
         } else {
-            month = linkTime.getMonth()+1;
-            year=linkTime.getFullYear()
+            month = linkTime.getMonth() + 1;
+            year = linkTime.getFullYear()
         }
         var childs = $(e).children();
         if (childs != null && childs.length != 0) {
@@ -26,13 +26,13 @@ var trafficrank = {
             contentType: "application/json",
             type: "GET",
             async: false,
-            data: "month=" + month+"&year="+year,
+            data: "month=" + month + "&year=" + year,
             success: function (result) {
                 var array = result.data;
                 for (var i = 0; i < 10; i++) {
                     if (array[i] != null) {
-                        keys.push(array[i].name.slice(0,2));
-                        values.push((array[i].totalNum/ 10000).toFixed(2) )
+                        keys.push(array[i].name.slice(0, 2));
+                        values.push((array[i].totalNum / 10000).toFixed(2))
                         e.append(" <div>" + (i + 1) + "</div>")
                     } else {
                         break;
@@ -46,14 +46,14 @@ var trafficrank = {
         var allMax = []
         var indexList = []
         var max = Math.max.apply(null, datas) / 0.8;
-        for(var i=0;i<datas.length;i++){
+        for (var i = 0; i < datas.length; i++) {
             allMax.push(max)
-            indexList.push(i+1)
+            indexList.push(i + 1)
         }
         var myColor = ['#0ecdf8', '#0ecdf8', '#0ecdf8', '#0ecdf8', '#0ecdf8', '#128aff', '#06fba9', '#ffc316'];
         option = {
             grid: {
-                left: '8%',
+                left: '10%',
                 right: '5%',
                 bottom: '-1%',
                 top: '1%',
@@ -92,7 +92,10 @@ var trafficrank = {
                     margin: -10,
                     align: 'left',
                     verticalAlign: 'bottom',
-                    padding: [0, 0, 10, 0]
+                    padding: [0, 0, 7, -9],
+                    fontWeight: 'bolder',
+                    color: '#252830',
+                    fontSize: '12'
                 }
 
             },
@@ -129,7 +132,7 @@ var trafficrank = {
                                 },
                                 height: 30,
                                 width: 30,
-                                fontSize:16
+                                fontSize: 16
                             },
                             a2: {
                                 backgroundColor: {
@@ -137,7 +140,7 @@ var trafficrank = {
                                 },
                                 height: 30,
                                 width: 30,
-                                fontSize:16
+                                fontSize: 16
                             },
                             a3: {
                                 backgroundColor: {
@@ -145,7 +148,7 @@ var trafficrank = {
                                 },
                                 height: 30,
                                 width: 30,
-                                fontSize:16
+                                fontSize: 16
                             },
                             a4: {
                                 backgroundColor: {
@@ -153,7 +156,7 @@ var trafficrank = {
                                 },
                                 height: 30,
                                 width: 30,
-                                fontSize:16
+                                fontSize: 16
                             },
                             a5: {
                                 backgroundColor: {
@@ -161,7 +164,7 @@ var trafficrank = {
                                 },
                                 height: 30,
                                 width: 30,
-                                fontSize:16
+                                fontSize: 16
                             },
                             a6: {
                                 backgroundColor: {
@@ -169,7 +172,7 @@ var trafficrank = {
                                 },
                                 height: 30,
                                 width: 30,
-                                fontSize:16
+                                fontSize: 16
                             },
                             a7: {
                                 backgroundColor: {
@@ -177,7 +180,7 @@ var trafficrank = {
                                 },
                                 height: 30,
                                 width: 30,
-                                fontSize:16
+                                fontSize: 16
                             },
                             a8: {
                                 backgroundColor: {
@@ -185,7 +188,7 @@ var trafficrank = {
                                 },
                                 height: 30,
                                 width: 30,
-                                fontSize:16
+                                fontSize: 16
                             },
                             a9: {
                                 backgroundColor: {
@@ -193,7 +196,7 @@ var trafficrank = {
                                 },
                                 height: 30,
                                 width: 30,
-                                fontSize:16
+                                fontSize: 16
                             },
                             a10: {
                                 backgroundColor: {
@@ -201,7 +204,7 @@ var trafficrank = {
                                 },
                                 height: 30,
                                 width: 30,
-                                fontSize:16
+                                fontSize: 16
                             }
                         },
 
@@ -219,8 +222,10 @@ var trafficrank = {
                     normal: {
                         show: true,
                         position: 'left',
-                        offset: [320, -10],
-                        color: '#000',
+                        offset: [310, -10],
+                        fontWeight: 'bolder',
+                        color: '#252830',
+                        fontSize: '12',
                         formatter: '{c}/万人'
                     }
                 },
@@ -235,7 +240,7 @@ var trafficrank = {
                 }
             }, {
                 type: 'bar',
-                data:allMax,
+                data: allMax,
                 barWidth: 10,
                 barGap: '-90%',
                 label: {

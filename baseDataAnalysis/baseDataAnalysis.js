@@ -29,7 +29,7 @@ var baseDataAnalysis = {
         that.lijiangmap()
     },
 
-    lijiangmap:function() {
+    lijiangmap: function () {
         var that = this
         var myChart = echarts.init(document.getElementById('lijiangmap'));
         var map = maps.lj
@@ -134,36 +134,39 @@ var baseDataAnalysis = {
                 },
             },
             backgroundColor: '#fff',
-            series: [{
-                type: 'map',
-                map: 'LJ',
-                zoom: 1.2,
-                color: "#f00",
-                label: {
-                    normal: {
-                        show: true,
-                        color: '#d0e6fd',
-                        fontWeight: 'bolder',
-                        fontSize: 18
-                    }
-                },
-                shadowStyle: {              // 阴影指示器样式设置
-                    width: 50,         // 阴影大小
-                    shadowColor: 'red', // 阴影颜色
-                    shadowBlur: 50
-                },
-                itemStyle: {
-                    normal: {
-                        borderColor: '#fdffff',
-                        color: '#ffd543',
-                        borderWidth: 'solid',
-                        shadowColor: '#97baf9',
-                        shadowBlur: 20
+            series: [
+                {
+                    type: 'map',
+                    map: 'LJ',
+                    zoom: 1.2,
+                    color: "#f00",
+                    label: {
+                        normal: {
+                            show: true,
+                            color: '#d0e6fd',
+                            fontWeight: 'bolder',
+                            fontSize: 18
+                        }
+                    },
 
-                    }
+                    shadowStyle: {              // 阴影指示器样式设置
+                        width: 50,         // 阴影大小
+                        shadowColor: 'red', // 阴影颜色
+                        shadowBlur: 50
+                    },
+                    itemStyle: {
+                        normal: {
+                            borderColor: '#fdffff',
+                            color: '#ffd543',
+                            borderWidth: 'solid',
+                            shadowColor: '#97baf9',
+                            shadowBlur: 20
+
+                        }
+                    },
+                    data: mapDate
                 },
-                data: mapDate
-            }]
+            ]
         };
         myChart.setOption(option);
     },
@@ -208,6 +211,7 @@ var baseDataAnalysis = {
                 formatter: "{b}: {c} ({d}%)"
             },
             legend: lengFormat,
+            calculable : true,
             series: [
                 {
                     name: name,
@@ -217,6 +221,10 @@ var baseDataAnalysis = {
                     avoidLabelOverlap: false,
                     hoverAnimation: false,//是否开启hover在扇形区域上放大动画效果
                     slient: true,//图形是否不响应和触发鼠标事件，默认为false，即响应和触发鼠标事件
+                    itemStyle:{
+                        borderType:'dotted',
+                        borderWidth:20
+                    },
                     label: {
                         normal: {
                             show: false,
@@ -303,7 +311,10 @@ var baseDataAnalysis = {
                         margin: 0,
                         align: 'left',
                         verticalAlign: 'bottom',
-                        padding: [0, 0, 10, 0]
+                        padding: [0, 0, 10, 0],
+                        fontWeight: 'bold',
+                        color: '#252830',
+                        fontSize: '12'
                     },
                     yAxisIndex: 1,
                 },
@@ -320,11 +331,14 @@ var baseDataAnalysis = {
                         show: false,
                     },
                     axisLabel: {
-                        show: true,
+                        show: false,
                         margin: 0,
                         align: 'left',
                         verticalAlign: 'bottom',
-                        padding: [0, 0, 10, -12]
+                        padding: [0, 0, 10, -12],
+                        fontWeight: 'bold',
+                        color: '#252830',
+                        fontSize: '12'
                     },
                     yAxisIndex: 1,
                 }
@@ -337,10 +351,13 @@ var baseDataAnalysis = {
                 z: 30,
                 label: {
                     normal: {
-                        show: false,
-                        position: 'center',
-                        offset: [500, 30],
-                        formatter: '{c}'
+                        show: true,
+                        position: 'left',
+                         offset: [190, -10],
+                         formatter: '{c}个',
+                        fontWeight: 'bold',
+                        color: '#252830',
+                        fontSize: '12'
                     }
                 },
                 itemStyle: {
@@ -445,7 +462,7 @@ var baseDataAnalysis = {
         }
         var max = Math.max.apply(null, dataValue) / 0.55;
         var dataMax = []
-        dataValue.forEach(item=>{
+        dataValue.forEach(item => {
             dataMax.push(max)
         })
         $('.secentCategory span').html(total).css({
@@ -513,7 +530,7 @@ var baseDataAnalysis = {
         }
         var max = Math.max.apply(null, dataValue) / 0.85;
         var dataMax = []
-        dataValue.forEach(item=>{
+        dataValue.forEach(item => {
             dataMax.push(max)
         })
         $('.hotelOperateBar span').html(total).css({
@@ -716,14 +733,14 @@ var baseDataAnalysis = {
         }
         var max = Math.max.apply(null, dataValue) / 0.6;
         var dataMax = []
-        dataValue.forEach(item=>{
+        dataValue.forEach(item => {
             dataMax.push(max)
         })
         $('.tirvalAgencyAnalysisBar span').html(total).css({
             'color': 'RGBA(252, 118, 0, 1)'
         })
         var grid = {
-            left: '-5%',
+            left: '-13%',
             right: '2%',
             bottom: '1%',
             top: '5%',
@@ -787,7 +804,7 @@ var baseDataAnalysis = {
             'color': 'RGBA(252, 118, 0, 1)'
         })
         var grid = {
-            left: '-5%',
+            left: '-7%',
             right: '2%',
             bottom: '1%',
             top: '5%',
@@ -848,7 +865,7 @@ var baseDataAnalysis = {
         }
         var max = Math.max.apply(null, dataValue) / 0.85;
         var dataMax = []
-        dataValue.forEach(item=>{
+        dataValue.forEach(item => {
             dataMax.push(max)
         })
         $('.tourGuideAnalysisBar span').html(total).css({

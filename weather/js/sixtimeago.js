@@ -23,33 +23,33 @@ var weatherSix = {
                 left: '3%',
                 right: '4%',
                 bottom: '3%',
+                top:'20%',
                 containLabel: true
             },
             xAxis: [
                 {
                     type: 'category',
                     data: ['10:00', '11:00', '12:00', '13:00', '14:00', '15:00'],
-                    axisTick: {
-                        alignWithLabel: false,
-                        show: false
+                    axisTick: {       //x轴刻度线
+                        "show": false
                     },
-                    axisLine: {
-                        lineStyle: {
-                            color: 'gray',//x轴线颜色
-                        }
+                    axisLine:{
+                        'show':false
                     }
                 }
             ],
             yAxis: [
                 {
                     type: 'value',
-                    axisTick: {
-                        alignWithLabel: false,
-                        show: false
+                    axisTick: {       //Y轴刻度线
+                        "show": false
                     },
-                    axisLine: {
-                        lineStyle: {
-                            color: 'gray',//y轴线颜色
+                    axisLine:{
+                        'show':false
+                    },
+                    splitLine:{
+                        lineStyle:{
+                            color:'#efefef'
                         }
                     }
                 },
@@ -60,7 +60,10 @@ var weatherSix = {
                     name: '',
                     type: 'bar',
                     barWidth: '40%',
-                    data: [10, 32, 20, 33, 39, 33]
+                    data: [10, 32, 20, 33, 39, 33],
+                    itemStyle:{
+                        barBorderRadius: [5, 5, 0, 0]
+                    }
                 }
             ]
         };

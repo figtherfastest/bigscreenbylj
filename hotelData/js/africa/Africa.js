@@ -77,7 +77,7 @@ var africa = {
                     name: '',
                     type: 'pie',
                     radius: ['50%', '70%'],
-                    center: ['50%', '37%'],
+                    center: ['50%', '33.9%'],
                     avoidLabelOverlap: false,
                     hoverAnimation: false,//是否开启hover在扇形区域上放大动画效果
                     slient: true,//图形是否不响应和触发鼠标事件，默认为false，即响应和触发鼠标事件
@@ -85,16 +85,17 @@ var africa = {
                         normal: {
                             show: false,
                             position: 'center',
-                            fontSize: '14',
-                            fontWeight: 'bold',
+                            fontSize: '12',
+                            color: '#020203',
+                            lineHeight:30,
                             formatter: "{a}\n{b}\n {c}人 \n{d}%"
                         },
                         emphasis: {
                             show: true,
                             textStyle: {
-                                fontSize: '14',
-                                fontWeight: 'bold',
-                                color: '#252830',
+                                fontSize: '12',
+                                lineHeight:30,
+                                color: '#020203',
                             }
                         }
                     },

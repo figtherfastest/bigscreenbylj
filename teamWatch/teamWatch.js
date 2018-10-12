@@ -554,7 +554,10 @@ var entry = {
                         margin: -4,
                         align: 'left',
                         verticalAlign: 'bottom',
-                        padding: [0, 0, 10, 0]
+                        padding: [0, 0, 7, 0],
+                        fontWeight: 'bolder',
+                        color: '#252830',
+                        fontSize: '12'
                     }
 
                 },
@@ -589,80 +592,80 @@ var entry = {
                                 backgroundColor: {
                                     image: '../image/navIndex/01.png'
                                 },
-                                height: 23,
-                                width: 23,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a2: {
                                 backgroundColor: {
                                     image: '../image/navIndex/02.png'
                                 },
-                                height: 23,
-                                width: 23,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a3: {
                                 backgroundColor: {
                                     image: '../image/navIndex/03.png'
                                 },
-                                height: 23,
-                                width: 23,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a4: {
                                 backgroundColor: {
                                     image: '../image/navIndex/04.png'
                                 },
-                                height: 23,
-                                width: 23,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a5: {
                                 backgroundColor: {
                                     image: '../image/navIndex/04.png'
                                 },
-                                height: 23,
-                                width: 23,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a6: {
                                 backgroundColor: {
                                     image: '../image/navIndex/04.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a7: {
                                 backgroundColor: {
                                     image: '../image/navIndex/04.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a8: {
                                 backgroundColor: {
                                     image: '../image/navIndex/04.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a9: {
                                 backgroundColor: {
                                     image: '../image/navIndex/04.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a10: {
                                 backgroundColor: {
                                     image: '../image/navIndex/04.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             }
                         },
@@ -682,7 +685,9 @@ var entry = {
                             show: true,
                             position: 'left',
                             offset: [320, -10],
-                            color: '#000',
+                            fontWeight: 'bolder',
+                            color: '#252830',
+                            fontSize: '12',
                             formatter: '{c}/万人'
                         }
                     },
@@ -725,15 +730,15 @@ var entry = {
         var dataList = []
         var sum = 0
         ageValue.forEach(item => {
-            sum+=(item / 10000)
+            sum += (item / 10000)
         })
         ageValue.forEach(item => {
-            dataList.push((item / 100)/sum)
+            dataList.push((item / 100) / sum)
         })
         var myColor = ['#0ecdf8', '#0ecdf8', '#128aff', '#06fba9', '#ffc316'];
         var max = Math.max.apply(null, dataList) / 0.85;
         var maxList = []
-        ageValue.forEach(res=>{
+        ageValue.forEach(res => {
             maxList.push(max)
         });
         option = {
@@ -781,7 +786,10 @@ var entry = {
                         margin: -4,
                         align: 'left',
                         verticalAlign: 'bottom',
-                        padding: [0, 0, -6, -60]
+                        padding: [0, 0, -6, -60],
+                        fontWeight: 'bolder',
+                        color: '#252830',
+                        fontSize: '12'
                     }
 
                 },
@@ -799,8 +807,10 @@ var entry = {
                             show: true,
                             position: 'left',
                             offset: [300, -10],
-                            color: '#000',
-                             formatter: '{c}%'
+                            fontWeight: 'bolder',
+                            color: '#252830',
+                            fontSize: '12',
+                            formatter: '{c}%'
                         }
                     },
                     itemStyle: {
@@ -1044,7 +1054,10 @@ var entry = {
                         margin: -4,
                         align: 'left',
                         verticalAlign: 'bottom',
-                        padding: [0, 0, 10, 0]
+                        padding: [0, 0, 8, 0],
+                        fontWeight: 'bolder',
+                        color: '#252830',
+                        fontSize: '12'
                     }
 
                 },
@@ -1079,80 +1092,80 @@ var entry = {
                                 backgroundColor: {
                                     image: '../image/navIndex/01.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a2: {
                                 backgroundColor: {
                                     image: '../image/navIndex/02.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a3: {
                                 backgroundColor: {
                                     image: '../image/navIndex/03.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a4: {
                                 backgroundColor: {
                                     image: '../image/navIndex/04.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a5: {
                                 backgroundColor: {
                                     image: '../image/navIndex/04.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a6: {
                                 backgroundColor: {
                                     image: '../image/navIndex/04.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a7: {
                                 backgroundColor: {
                                     image: '../image/navIndex/04.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a8: {
                                 backgroundColor: {
                                     image: '../image/navIndex/04.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a9: {
                                 backgroundColor: {
                                     image: '../image/navIndex/04.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a10: {
                                 backgroundColor: {
                                     image: '../image/navIndex/04.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             }
                         },
@@ -1171,9 +1184,10 @@ var entry = {
                         normal: {
                             show: true,
                             position: 'right',
-                            color: '#000',
-                            // offset: [35, -15],
-                            formatter: '{c}/万人'
+                            formatter: '{c}/万人',
+                            fontWeight: 'bolder',
+                            color: '#252830',
+                            fontSize: '12',
                         }
                     },
                     itemStyle: {
@@ -1430,7 +1444,10 @@ var entry = {
                         margin: -4,
                         align: 'left',
                         verticalAlign: 'bottom',
-                        padding: [0, 0, 10, 0]
+                        padding: [0, 0, 7, 0],
+                        fontWeight: 'bolder',
+                        color: '#252830',
+                        fontSize: '12'
                     }
 
                 },
@@ -1465,80 +1482,80 @@ var entry = {
                                 backgroundColor: {
                                     image: '../image/navIndex/01.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a2: {
                                 backgroundColor: {
                                     image: '../image/navIndex/02.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a3: {
                                 backgroundColor: {
                                     image: '../image/navIndex/03.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a4: {
                                 backgroundColor: {
                                     image: '../image/navIndex/04.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a5: {
                                 backgroundColor: {
                                     image: '../image/navIndex/04.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a6: {
                                 backgroundColor: {
                                     image: '../image/navIndex/04.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a7: {
                                 backgroundColor: {
                                     image: '../image/navIndex/04.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a8: {
                                 backgroundColor: {
                                     image: '../image/navIndex/04.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a9: {
                                 backgroundColor: {
                                     image: '../image/navIndex/04.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             },
                             a10: {
                                 backgroundColor: {
                                     image: '../image/navIndex/04.png'
                                 },
-                                height: 30,
-                                width: 30,
+                                height: 25,
+                                width: 25,
                                 fontSize: 16
                             }
                         },
@@ -1558,7 +1575,9 @@ var entry = {
                             show: true,
                             position: 'left',
                             offset: [320, -10],
-                            color: '#000',
+                            fontWeight: 'bolder',
+                            color: '#252830',
+                            fontSize: '12',
                             formatter: '{c}/万人'
                         }
                     },
